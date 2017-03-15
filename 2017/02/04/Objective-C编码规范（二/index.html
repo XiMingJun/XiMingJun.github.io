@@ -6,21 +6,60 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>金融类app数值精确计算问题 | 蜗牛yu梦想</title>
+  <title>Objective-C 编码规范(二) | 蜗牛yu梦想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
+  <meta name="description" content="目录
+
+2 命名
+2.1  文件名
+2.2 Objective-C++
+2.3 类名
+2.4 类别名
+2.5 Objective-C方法名
+2.6 变量名
+2.7 通知名
+2.8 协议名
+
+
+
+对于易维护的代码而言，命名规则非常重要。Objective-C 的方法名往往十分长，但代码块读起来就像散文一样，不需要太多的代码注释。当编写纯粹的 Objective-C 代码时，我们基本遵守标准的 Obj">
 <meta property="og:type" content="article">
-<meta property="og:title" content="金融类app数值精确计算问题">
-<meta property="og:url" content="http://yoursite.com/2017/01/23/金融类app数值精确计算问题/index.html">
+<meta property="og:title" content="Objective-C 编码规范(二)">
+<meta property="og:url" content="http://yoursite.com/2017/02/04/Objective-C编码规范（二/index.html">
 <meta property="og:site_name" content="蜗牛yu梦想">
-<meta property="og:description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
-<meta property="og:updated_time" content="2017-01-23T06:49:47.000Z">
+<meta property="og:description" content="目录
+
+2 命名
+2.1  文件名
+2.2 Objective-C++
+2.3 类名
+2.4 类别名
+2.5 Objective-C方法名
+2.6 变量名
+2.7 通知名
+2.8 协议名
+
+
+
+对于易维护的代码而言，命名规则非常重要。Objective-C 的方法名往往十分长，但代码块读起来就像散文一样，不需要太多的代码注释。当编写纯粹的 Objective-C 代码时，我们基本遵守标准的 Obj">
+<meta property="og:updated_time" content="2017-03-15T04:39:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="金融类app数值精确计算问题">
-<meta name="twitter:description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
+<meta name="twitter:title" content="Objective-C 编码规范(二)">
+<meta name="twitter:description" content="目录
+
+2 命名
+2.1  文件名
+2.2 Objective-C++
+2.3 类名
+2.4 类别名
+2.5 Objective-C方法名
+2.6 变量名
+2.7 通知名
+2.8 协议名
+
+
+
+对于易维护的代码而言，命名规则非常重要。Objective-C 的方法名往往十分长，但代码块读起来就像散文一样，不需要太多的代码注释。当编写纯粹的 Objective-C 代码时，我们基本遵守标准的 Obj">
   
     <link rel="alternative" href="/atom.xml" title="蜗牛yu梦想" type="application/atom+xml">
   
@@ -156,68 +195,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-金融类app数值精确计算问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Objective-C编码规范（二" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      金融类app数值精确计算问题
+      Objective-C 编码规范(二)
     </h1>
   
 
         
-        <a href="/2017/01/23/金融类app数值精确计算问题/" class="archive-article-date">
-  	<time datetime="2017-01-23T03:54:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-23</time>
+        <a href="/2017/02/04/Objective-C编码规范（二/" class="archive-article-date">
+  	<time datetime="2017-02-04T06:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="金融类app各种数值的精确计算问题"><a href="#金融类app各种数值的精确计算问题" class="headerlink" title="金融类app各种数值的精确计算问题"></a>金融类app各种数值的精确计算问题</h3><pre><code>最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-</code></pre><h4 id="1-简单粗暴的方法—doubleValue解决"><a href="#1-简单粗暴的方法—doubleValue解决" class="headerlink" title="1.简单粗暴的方法—doubleValue解决"></a>1.简单粗暴的方法—doubleValue解决</h4><pre><code>刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果也会出现不准确的问题，一个最近踩过的坑就是用户再输入投资金额的时候会对自己账户中的可用余额进行判断，以确定余额是否充足，测试的时候输入很多数据都没问题，但线上用户大量数据就会出现偶尔数据错误，用户输入金额明明和可用余额一样，但判断的时候就会提示可用余额不足，老板使用过程中也遇到过，还找了我好几次，汗，都是之前开发人员的坑。所以记住这丫简单粗暴的方法针对金融类的对数据精度及其敏感的项目不可取。
-</code></pre><h4 id="2-明智之举—NSDecimalNumber"><a href="#2-明智之举—NSDecimalNumber" class="headerlink" title="2.明智之举—NSDecimalNumber"></a>2.明智之举—NSDecimalNumber</h4><p>  NSDecimalNumber是苹果提供的专门金融货币精确数值计算的API。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">+ (instancetype)decimalNumberHandlerWithRoundingMode:(NSRoundingMode)roundingMode</div><div class="line">                                               scale:(short)scale</div><div class="line">                                    raiseOnExactness:(BOOL)raiseOnExactness</div><div class="line">                                     raiseOnOverflow:(BOOL)raiseOnOverflow</div><div class="line">                                    raiseOnUnderflow:(BOOL)raiseOnUnderflow</div><div class="line">                                 raiseOnDivideByZero:(BOOL)raiseOnDivideByZero</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>roundingMode</td>
-<td style="text-align:center">要使用的舍入模式，有四种值： NSRoundUp, NSRoundDown, NSRoundPlain, and NSRoundBankers</td>
-</tr>
-<tr>
-<td>scale</td>
-<td style="text-align:center">结果保留几位小数</td>
-</tr>
-<tr>
-<td>raiseOnExactness</td>
-<td style="text-align:center">发生精确错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnOverflow</td>
-<td style="text-align:center">发生溢出错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnUnderflow</td>
-<td style="text-align:center">发生不足错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnDivideByZero</td>
-<td style="text-align:center">被0除时是否抛出异常，一般为YES</td>
-</tr>
-</tbody>
-</table>
-<h5 id="2-1-NSDecimalNumber-的使用。"><a href="#2-1-NSDecimalNumber-的使用。" class="headerlink" title="2.1 NSDecimalNumber 的使用。"></a>2.1 NSDecimalNumber 的使用。</h5><p>  NSDecimalNumber是进行数值计算的对象，ji所有的加减乘除，幂运算操作对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundBankers</div><div class="line">                                                                                         scale:2</div><div class="line">                                                                              raiseOnExactness:NO</div><div class="line">                                                                               raiseOnOverflow:NO</div><div class="line">                                                                              raiseOnUnderflow:NO</div><div class="line">                                                                           raiseOnDivideByZero:YES];</div><div class="line">NSDecimalNumber *num1           = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%@&quot;,@&quot;2.37&quot;]];</div><div class="line">NSDecimalNumber *num2           = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%@&quot;,@&quot;15.89&quot;]];</div><div class="line"></div><div class="line">//加</div><div class="line">NSDecimalNumber *addResult      = [num1 decimalNumberByAdding:num2</div><div class="line">                                                 withBehavior:handler];</div><div class="line">//减</div><div class="line">NSDecimalNumber *subtractResult = [num1 decimalNumberBySubtracting:num2</div><div class="line">                                                      withBehavior:handler];</div><div class="line">//乘</div><div class="line">NSDecimalNumber *multiplyResult = [num1 decimalNumberByMultiplyingBy:num2</div><div class="line">                                                        withBehavior:handler];</div><div class="line">//除</div><div class="line">NSDecimalNumber *divideResult   = [num1 decimalNumberByDividingBy:num2</div><div class="line">                                                   withBehavior:handler];</div><div class="line">//平方</div><div class="line">NSDecimalNumber *powerResult    = [num1 decimalNumberByRaisingToPower:2</div><div class="line">                                                      withBehavior:handler];</div><div class="line">NSLog(@&quot;\n%f\n%f\n%f\n%f\n%f&quot;,[addResult doubleValue],[subtractResult doubleValue],[multiplyResult doubleValue],[divideResult doubleValue],[powerResult doubleValue]);</div></pre></td></tr></table></figure>
-<p>这样就能够很好地解决金融类app货币单位精确计算的问题。但有一点需要注意的是如果计算公式比较长，那么withBehavior应该在最后一步使用，切不可在计算过程中进行舍入操作，相信有点数学常识的同学都能明白这个问题。<br>如下：等额本息的预计收益计算<br> <em>*  公式： 每月本息还款额=(投资金额</em>月利率<em>(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> *  等额本息标的收益计算</div><div class="line"> *  公式： 每月本息还款额=(投资金额*月利率*(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</div><div class="line"> *  @param interest     年化收益</div><div class="line"> *  @param investAmount 投资金额</div><div class="line"> *  @param selectBid    选择的标</div><div class="line"> *</div><div class="line"> *  @return 收益</div><div class="line"> */</div><div class="line">+ (double)calculatePrincipalAndInterestBidWithInvestInterest:(double)interest</div><div class="line">                                                      amount:(NSString *)investAmount</div><div class="line">                                                         bid:(Bid *)selectBid&#123;</div><div class="line">    </div><div class="line">    NSDecimalNumberHandler *roundBanker = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundBankers</div><div class="line">                                                                                                 scale:2.0f</div><div class="line">                                                                                      raiseOnExactness:NO</div><div class="line">                                                                                       raiseOnOverflow:NO</div><div class="line">                                                                                      raiseOnUnderflow:NO</div><div class="line">                                                                                   raiseOnDivideByZero:YES];</div><div class="line">    NSDecimalNumber *investAmountDec = [[NSDecimalNumber alloc] initWithString:investAmount];//投资金额</div><div class="line">    NSDecimalNumber *monthInterestDec = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,interest/100]] decimalNumberByDividingBy:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,12.00]]];//月利率</div><div class="line">    </div><div class="line">    double month = selectBid.creditPeriod;//标的募集期数</div><div class="line">    if (selectBid.creditType == CreditType_DaylyOneOffPayment) &#123;</div><div class="line">        //按天标,转化为月份</div><div class="line">        month = month/30.00;</div><div class="line">    &#125;</div><div class="line">    NSDecimalNumber *monthDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,month]];//还款月数</div><div class="line">//    *  公式： 每月本息还款额=(投资金额*月利率*(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</div><div class="line">    NSDecimalNumber *decNum1 = [[[[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]] decimalNumberByAdding:monthInterestDec] decimalNumberByRaisingToPower:month] decimalNumberByMultiplyingBy:monthInterestDec] decimalNumberByMultiplyingBy:investAmountDec];</div><div class="line">    NSDecimalNumber *decNum2 = [[[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]] decimalNumberByAdding:monthInterestDec] decimalNumberByRaisingToPower:month] decimalNumberBySubtracting:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]]];</div><div class="line">    NSDecimalNumber *monthIncomeDec = [decNum1 decimalNumberByDividingBy:decNum2];//月本息还款额</div><div class="line">    NSDecimalNumber *totalIncomeDec = [[monthDec decimalNumberByMultiplyingBy:monthIncomeDec] decimalNumberBySubtracting:investAmountDec withBehavior:roundBanker];//总还款额 - 本金 = 总收益</div><div class="line">    return [totalIncomeDec doubleValue] &gt; 0 ? [totalIncomeDec doubleValue] : 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p><a name="TOC"></a>目录</p>
+<ul>
+<li><a href="#name">2 命名</a><ul>
+<li><a href="#fileName">2.1  文件名</a></li>
+<li><a href="#Objective-C++">2.2 Objective-C++</a></li>
+<li><a href="#className">2.3 类名</a></li>
+<li><a href="#ClassExternName">2.4 类别名</a></li>
+<li><a href="#Objective-CMethodName">2.5 Objective-C方法名</a></li>
+<li><a href="#varName">2.6 变量名</a></li>
+<li><a href="#NotificationName">2.7 通知名</a></li>
+<li><a href="#Prototol_Name">2.8 协议名</a></li>
+</ul>
+</li>
+</ul>
+<p>对于易维护的代码而言，命名规则非常重要。Objective-C 的方法名往往十分长，但代码块读起来就像散文一样，不需要太多的代码注释。<br>当编写纯粹的 Objective-C 代码时，我们基本遵守标准的 Objective-C naming rules，这些命名规则可能与 C++ 风格指南中的大相径庭。例如，Google 的 C++ 风格指南中推荐使用下划线分隔的单词作为变量名，而(苹果的)风格指南则使用驼峰命名法，这在 Objective-C 社区中非常普遍。<br>任何的类、类别、方法以及变量的名字中都使用全大写的 首字母缩写。这遵守了苹果的标准命名方式，如 URL、TIFF 以及 EXIF。<br>当编写 Objective-C++ 代码时，事情就不这么简单了。许多项目需要实现跨平台的 C++ API，并混合一些 Objective-C、Cocoa 代码，或者直接以 C++ 为后端，前端用本地 Cocoa 代码。这就导致了两种命名方式直接不统一。</p>
+<p> 我们的解决方案是：编码风格取决于方法/函数以哪种语言实现。如果在一个 @implementation 语句中，就使用 Objective-C 的风格。如果实现一个 C++ 的类，就使用 C++ 的风格。这样避免了一个函数里面实例变量和局部变量命名规则混乱，严重影响可读性。</p>
+<p><a name="name"></a>2  命名</p>
+<hr>
+<h3 id="2-1-文件名"><a href="#2-1-文件名" class="headerlink" title="2.1 文件名"></a><a name="fileName"></a>2.1 文件名</h3><blockquote>
+<p>【建议】文件名的命名应反映出其实现了什么类–包括大小写。遵循你所参与项目的约定。<br>  文件的扩展名应该如下：<br>|后缀|文件类型说明|<br>|:—————|:—————–|<br>| .h     | C/C++/Objective-C头文件 |<br>| .m     |Objective-C实现文件       |<br>| .mm    | Ojbective-C++ 的实现文件 |<br>|.cc     |纯C++实现文件             |<br>|.c      |纯C实现文件               |</p>
+</blockquote>
+<h3 id="2-2-Objective-C"><a href="#2-2-Objective-C" class="headerlink" title="2.2  Objective-C++"></a><a name=" Objective-C++"></a>2.2  Objective-C++</h3><blockquote>
+<p>【建议】源代码文件内，Ojbective-C++ 代码遵循你正在实现的函数/方法的风格。</p>
+</blockquote>
+<pre><code>为了最小化 Cocoa/Objective-C 与 C++ 之间命名风格的冲突，根据待实现的函数/方法选择编码风格。实现 @implementation 语句块时，使用 Objective-C 的命名规则；如果实现一个 C++ 的类，就使用 C++ 命名规则。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">// file: cross_platform_header.h </div><div class="line"> class CrossPlatformAPI &#123;  </div><div class="line">public:  </div><div class="line"> ...   </div><div class="line">int DoSomethingPlatformSpecific();  // impl on each platform  </div><div class="line">private:  </div><div class="line"> int an_instance_var_; </div><div class="line">&#125;;</div><div class="line">// file: mac_implementation.mm </div><div class="line">#include &quot;cross_platform_header.h&quot;  </div><div class="line">// A typical Objective-C class, using Objective-C naming. </div><div class="line"></div><div class="line">@interface MyDelegate : NSObject &#123; </div><div class="line"> @private   int instanceVar_;   </div><div class="line">CrossPlatformAPI* backEndObject_; </div><div class="line">&#125; </div><div class="line">(void)respondToSomething:(id)something; </div><div class="line">@end </div><div class="line">@implementation MyDelegate </div><div class="line">- (void)respondToSomething:(id)something &#123; </div><div class="line"></div><div class="line">  // bridge from Cocoa through our C++ backend  </div><div class="line">instanceVar_ = backEndObject-&gt;DoSomethingPlatformSpecific();</div><div class="line"> NSString* tempString = [NSString stringWithInt:instanceVar_]; </div><div class="line"> NSLog(@&quot;%@&quot;, tempString); </div><div class="line"></div><div class="line">&#125;</div><div class="line">@end </div><div class="line"></div><div class="line"> // The platform-specific implementation of the C++ class, using </div><div class="line">// C++ naming.</div><div class="line">int CrossPlatformAPI::DoSomethingPlatformSpecific() &#123;  </div><div class="line"> NSString* temp_string = [NSString stringWithInt:an_instance_var_];</div><div class="line"> NSLog(@&quot;%@&quot;, temp_string);   </div><div class="line">return [temp_string intValue]; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-3-类名"><a href="#2-3-类名" class="headerlink" title="2.3 类名"></a><a name="className"></a>2.3 类名</h3><blockquote>
+<p>【建议】类名（以及类别、协议名）应首字母大写，并以驼峰格式分割单词。</p>
+</blockquote>
+<pre><code>应用层 的代码，应该尽量避免不必要的前缀。为每个类都添加相同的前缀无助于可读性。当编写的代码期望在不同应用程序间复用时，应使用前缀（如：GTMSendMessage）。
+</code></pre><h3 id="2-4-类别名"><a href="#2-4-类别名" class="headerlink" title="2.4 类别名"></a><a name="ClassExternName"></a>2.4 类别名</h3><blockquote>
+<p>【建议】类别名应该包含它所扩展的类的名字。同时还应该表明该类别的功能。推荐如下方式：” UILabel+FlickerNumber.h”</p>
+</blockquote>
+<p>###<a name="Objective-CMethodName"></a>2.5 Objective-C方法名</p>
+<blockquote>
+<p>【建议】方法名应该以小写字母开头，并混合驼峰格式。每个具名参数也应该以小写字母开头。</p>
+</blockquote>
+<pre><code>方法名应尽量读起来就像句子，这表示你应该选择与方法名连在一起读起来通顺的参数名。（例如，convertPoint:fromRect: 或 replaceCharactersInRange:withString:）。
+访问器方法应该与他们 要获取的 成员变量的名字一样，但不应该以get作为前缀。
+</code></pre><ul>
+<li>以  get 、 set  开头的方法有特殊的意义，不要随意定义。<br>set 是属性默认的设置方法，如果函数不是为了设置类成员，则不要用  set  开头，可用  setup  替代。</li>
+<li>get 和属性方法无关，但在 Cocoa 中，其标准行为是通过引用传值，而不是直接返回结果的。欲获取变量，直接以变量名为名，如： userInfomation ，而不是  getUserInfomation 。<br>例如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (id)getDelegate;  // AVOID </div><div class="line">- (id)delegate;     // GOOD</div></pre></td></tr></table></figure>
+<pre><code>这仅限于 Objective-C 的方法名。C++ 的方法与函数的命名规则应该遵从 C++ 风格指南中的规则。
+</code></pre><h3 id="2-6-变量名"><a href="#2-6-变量名" class="headerlink" title="2.6 变量名"></a><a name="varName"></a>2.6 变量名</h3><blockquote>
+<p>【建议】变量名应该以小写字母开头，并使用驼峰格式。类的成员变量应该以下划线作为后缀。</p>
+</blockquote>
+<p>  例如：myLocalVariable、myInstanceVariable_。如果不能使用 Objective-C 2.0 的 @property，使用 KVO/KVC 绑定的成员变量可以以一个下划线作为前缀。</p>
+<h4 id="2-6-1-普通变量名"><a href="#2-6-1-普通变量名" class="headerlink" title="2.6.1 普通变量名"></a><a name=""></a>2.6.1 普通变量名</h4><pre><code>对于静态的属性（int 或指针），不要使用匈牙利命名法。尽量为变量起一个描述性的名字。不要担心浪费列宽，因为让新的代码阅读者立即理解你的代码更重要。例如：
+</code></pre><h4 id="2-6-2-实例变量"><a href="#2-6-2-实例变量" class="headerlink" title="2.6.2 实例变量"></a><a name=""></a>2.6.2 实例变量</h4><pre><code>实例变量应该混合大小写，并以下划线作为后缀，如 usernameTextField_。然而，如果不能使用 Objective-C 2.0（操作系统版本的限制），并且使用了 KVO/KVC 绑定成员变量时，我们允许例外。这种情况下，可以以一个下划线作为成员变量名字的前缀，这是苹果所接受的键/值命名惯例。如果可以使用 Objective-C 2.0，@property 以及 @synthesize 提供了遵从这一命名规则的解决方案。
+</code></pre><h4 id="2-6-3-常量"><a href="#2-6-3-常量" class="headerlink" title="2.6.3 常量"></a><a name=""></a>2.6.3 常量</h4><pre><code>常量名（如宏定义、枚举、静态局部变量等）应该以小写字母 k 开头，使用驼峰格式分隔单词，如：kInvalidHandle，kWritePerm。
+</code></pre><h3 id="2-7-通知命名"><a href="#2-7-通知命名" class="headerlink" title="2.7 通知命名"></a><a name="NotificationName"></a>2.7 通知命名</h3><blockquote>
+<p>【建议】基本命名格式是： [与通知相关的类名] + [Did | Will] + [UniquePartOfName] + Notification 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">NSApplicationDidBecomeActiveNotification</div><div class="line">NSWindowDidMiniaturizeNotification</div><div class="line">NSTextViewDidChangeSelectionNotification</div><div class="line">NSColorPanelColorDidChangeNotification</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="2-8协议名"><a href="#2-8协议名" class="headerlink" title="2.8协议名"></a><a name="Prototol_Name"></a>2.8协议名</h3><blockquote>
+<p>【建议】常用的 delegate、dateSource 做结尾外，还可以使用 …ing 这种形式，如：NSCoding、NSCopying、NSLocking</p>
+</blockquote>
 
       
 
@@ -302,7 +357,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/01/23/金融类app数值精确计算问题/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/04/Objective-C编码规范（二/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -316,18 +371,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/23/部署Hexo博客填坑记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/02/04/Objective-C 编码规范(一)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          部署Hexo博客填坑记
+          Objective-C 编码规范(一)
         
       </div>
     </a>
   
   
-    <a href="/2017/01/23/iOS-项目自动化打包实践/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">iOS 项目自动化打包实践</div>
+    <a href="/2017/02/04/Objective-C 编码规范（三，四)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Objective-C 编码规范（三，四）</div>
       <i class="icon-circle-right"></i>
     </a>
   

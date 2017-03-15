@@ -6,21 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>金融类app数值精确计算问题 | 蜗牛yu梦想</title>
+  <title>使用Xcode的Targets来管理开发和生产版本的构建. | 蜗牛yu梦想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
+  <meta name="description" content="技术总是需要在不断地学习，实践中获得进步，最近看到一篇文章挺好的，拿出来跟大家分享一下。
+链接在这里
+1.应用前生产和开发版本的管理。 生产和开发版本的区别
+
+链接的环境不同。
+开发版本的日志输出，生产版本不需要。
+为了便于测试而对开发版本的的相应设置进行修改，生产版本需要改过来（例如某些宏定义的设置）。
+ 对于以上问题，虽然有些可以通过区分debug和release版本进行区分，但是更多的还是要">
 <meta property="og:type" content="article">
-<meta property="og:title" content="金融类app数值精确计算问题">
-<meta property="og:url" content="http://yoursite.com/2017/01/23/金融类app数值精确计算问题/index.html">
+<meta property="og:title" content="使用Xcode的Targets来管理开发和生产版本的构建.">
+<meta property="og:url" content="http://yoursite.com/2017/02/04/使用Xcode的Targets来管理开发和生产版本的构建/index.html">
 <meta property="og:site_name" content="蜗牛yu梦想">
-<meta property="og:description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
-<meta property="og:updated_time" content="2017-01-23T06:49:47.000Z">
+<meta property="og:description" content="技术总是需要在不断地学习，实践中获得进步，最近看到一篇文章挺好的，拿出来跟大家分享一下。
+链接在这里
+1.应用前生产和开发版本的管理。 生产和开发版本的区别
+
+链接的环境不同。
+开发版本的日志输出，生产版本不需要。
+为了便于测试而对开发版本的的相应设置进行修改，生产版本需要改过来（例如某些宏定义的设置）。
+ 对于以上问题，虽然有些可以通过区分debug和release版本进行区分，但是更多的还是要">
+<meta property="og:image" content="http://img.blog.csdn.net/20160406163710407">
+<meta property="og:image" content="http://img.blog.csdn.net/20160406165711633">
+<meta property="og:updated_time" content="2017-03-15T04:39:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="金融类app数值精确计算问题">
-<meta name="twitter:description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
+<meta name="twitter:title" content="使用Xcode的Targets来管理开发和生产版本的构建.">
+<meta name="twitter:description" content="技术总是需要在不断地学习，实践中获得进步，最近看到一篇文章挺好的，拿出来跟大家分享一下。
+链接在这里
+1.应用前生产和开发版本的管理。 生产和开发版本的区别
+
+链接的环境不同。
+开发版本的日志输出，生产版本不需要。
+为了便于测试而对开发版本的的相应设置进行修改，生产版本需要改过来（例如某些宏定义的设置）。
+ 对于以上问题，虽然有些可以通过区分debug和release版本进行区分，但是更多的还是要">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160406163710407">
   
     <link rel="alternative" href="/atom.xml" title="蜗牛yu梦想" type="application/atom+xml">
   
@@ -156,68 +177,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-金融类app数值精确计算问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-使用Xcode的Targets来管理开发和生产版本的构建" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      金融类app数值精确计算问题
+      使用Xcode的Targets来管理开发和生产版本的构建.
     </h1>
   
 
         
-        <a href="/2017/01/23/金融类app数值精确计算问题/" class="archive-article-date">
-  	<time datetime="2017-01-23T03:54:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-23</time>
+        <a href="/2017/02/04/使用Xcode的Targets来管理开发和生产版本的构建/" class="archive-article-date">
+  	<time datetime="2017-02-04T07:40:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="金融类app各种数值的精确计算问题"><a href="#金融类app各种数值的精确计算问题" class="headerlink" title="金融类app各种数值的精确计算问题"></a>金融类app各种数值的精确计算问题</h3><pre><code>最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-</code></pre><h4 id="1-简单粗暴的方法—doubleValue解决"><a href="#1-简单粗暴的方法—doubleValue解决" class="headerlink" title="1.简单粗暴的方法—doubleValue解决"></a>1.简单粗暴的方法—doubleValue解决</h4><pre><code>刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果也会出现不准确的问题，一个最近踩过的坑就是用户再输入投资金额的时候会对自己账户中的可用余额进行判断，以确定余额是否充足，测试的时候输入很多数据都没问题，但线上用户大量数据就会出现偶尔数据错误，用户输入金额明明和可用余额一样，但判断的时候就会提示可用余额不足，老板使用过程中也遇到过，还找了我好几次，汗，都是之前开发人员的坑。所以记住这丫简单粗暴的方法针对金融类的对数据精度及其敏感的项目不可取。
-</code></pre><h4 id="2-明智之举—NSDecimalNumber"><a href="#2-明智之举—NSDecimalNumber" class="headerlink" title="2.明智之举—NSDecimalNumber"></a>2.明智之举—NSDecimalNumber</h4><p>  NSDecimalNumber是苹果提供的专门金融货币精确数值计算的API。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">+ (instancetype)decimalNumberHandlerWithRoundingMode:(NSRoundingMode)roundingMode</div><div class="line">                                               scale:(short)scale</div><div class="line">                                    raiseOnExactness:(BOOL)raiseOnExactness</div><div class="line">                                     raiseOnOverflow:(BOOL)raiseOnOverflow</div><div class="line">                                    raiseOnUnderflow:(BOOL)raiseOnUnderflow</div><div class="line">                                 raiseOnDivideByZero:(BOOL)raiseOnDivideByZero</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>roundingMode</td>
-<td style="text-align:center">要使用的舍入模式，有四种值： NSRoundUp, NSRoundDown, NSRoundPlain, and NSRoundBankers</td>
-</tr>
-<tr>
-<td>scale</td>
-<td style="text-align:center">结果保留几位小数</td>
-</tr>
-<tr>
-<td>raiseOnExactness</td>
-<td style="text-align:center">发生精确错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnOverflow</td>
-<td style="text-align:center">发生溢出错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnUnderflow</td>
-<td style="text-align:center">发生不足错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnDivideByZero</td>
-<td style="text-align:center">被0除时是否抛出异常，一般为YES</td>
-</tr>
-</tbody>
-</table>
-<h5 id="2-1-NSDecimalNumber-的使用。"><a href="#2-1-NSDecimalNumber-的使用。" class="headerlink" title="2.1 NSDecimalNumber 的使用。"></a>2.1 NSDecimalNumber 的使用。</h5><p>  NSDecimalNumber是进行数值计算的对象，ji所有的加减乘除，幂运算操作对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundBankers</div><div class="line">                                                                                         scale:2</div><div class="line">                                                                              raiseOnExactness:NO</div><div class="line">                                                                               raiseOnOverflow:NO</div><div class="line">                                                                              raiseOnUnderflow:NO</div><div class="line">                                                                           raiseOnDivideByZero:YES];</div><div class="line">NSDecimalNumber *num1           = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%@&quot;,@&quot;2.37&quot;]];</div><div class="line">NSDecimalNumber *num2           = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%@&quot;,@&quot;15.89&quot;]];</div><div class="line"></div><div class="line">//加</div><div class="line">NSDecimalNumber *addResult      = [num1 decimalNumberByAdding:num2</div><div class="line">                                                 withBehavior:handler];</div><div class="line">//减</div><div class="line">NSDecimalNumber *subtractResult = [num1 decimalNumberBySubtracting:num2</div><div class="line">                                                      withBehavior:handler];</div><div class="line">//乘</div><div class="line">NSDecimalNumber *multiplyResult = [num1 decimalNumberByMultiplyingBy:num2</div><div class="line">                                                        withBehavior:handler];</div><div class="line">//除</div><div class="line">NSDecimalNumber *divideResult   = [num1 decimalNumberByDividingBy:num2</div><div class="line">                                                   withBehavior:handler];</div><div class="line">//平方</div><div class="line">NSDecimalNumber *powerResult    = [num1 decimalNumberByRaisingToPower:2</div><div class="line">                                                      withBehavior:handler];</div><div class="line">NSLog(@&quot;\n%f\n%f\n%f\n%f\n%f&quot;,[addResult doubleValue],[subtractResult doubleValue],[multiplyResult doubleValue],[divideResult doubleValue],[powerResult doubleValue]);</div></pre></td></tr></table></figure>
-<p>这样就能够很好地解决金融类app货币单位精确计算的问题。但有一点需要注意的是如果计算公式比较长，那么withBehavior应该在最后一步使用，切不可在计算过程中进行舍入操作，相信有点数学常识的同学都能明白这个问题。<br>如下：等额本息的预计收益计算<br> <em>*  公式： 每月本息还款额=(投资金额</em>月利率<em>(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> *  等额本息标的收益计算</div><div class="line"> *  公式： 每月本息还款额=(投资金额*月利率*(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</div><div class="line"> *  @param interest     年化收益</div><div class="line"> *  @param investAmount 投资金额</div><div class="line"> *  @param selectBid    选择的标</div><div class="line"> *</div><div class="line"> *  @return 收益</div><div class="line"> */</div><div class="line">+ (double)calculatePrincipalAndInterestBidWithInvestInterest:(double)interest</div><div class="line">                                                      amount:(NSString *)investAmount</div><div class="line">                                                         bid:(Bid *)selectBid&#123;</div><div class="line">    </div><div class="line">    NSDecimalNumberHandler *roundBanker = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundBankers</div><div class="line">                                                                                                 scale:2.0f</div><div class="line">                                                                                      raiseOnExactness:NO</div><div class="line">                                                                                       raiseOnOverflow:NO</div><div class="line">                                                                                      raiseOnUnderflow:NO</div><div class="line">                                                                                   raiseOnDivideByZero:YES];</div><div class="line">    NSDecimalNumber *investAmountDec = [[NSDecimalNumber alloc] initWithString:investAmount];//投资金额</div><div class="line">    NSDecimalNumber *monthInterestDec = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,interest/100]] decimalNumberByDividingBy:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,12.00]]];//月利率</div><div class="line">    </div><div class="line">    double month = selectBid.creditPeriod;//标的募集期数</div><div class="line">    if (selectBid.creditType == CreditType_DaylyOneOffPayment) &#123;</div><div class="line">        //按天标,转化为月份</div><div class="line">        month = month/30.00;</div><div class="line">    &#125;</div><div class="line">    NSDecimalNumber *monthDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,month]];//还款月数</div><div class="line">//    *  公式： 每月本息还款额=(投资金额*月利率*(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</div><div class="line">    NSDecimalNumber *decNum1 = [[[[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]] decimalNumberByAdding:monthInterestDec] decimalNumberByRaisingToPower:month] decimalNumberByMultiplyingBy:monthInterestDec] decimalNumberByMultiplyingBy:investAmountDec];</div><div class="line">    NSDecimalNumber *decNum2 = [[[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]] decimalNumberByAdding:monthInterestDec] decimalNumberByRaisingToPower:month] decimalNumberBySubtracting:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]]];</div><div class="line">    NSDecimalNumber *monthIncomeDec = [decNum1 decimalNumberByDividingBy:decNum2];//月本息还款额</div><div class="line">    NSDecimalNumber *totalIncomeDec = [[monthDec decimalNumberByMultiplyingBy:monthIncomeDec] decimalNumberBySubtracting:investAmountDec withBehavior:roundBanker];//总还款额 - 本金 = 总收益</div><div class="line">    return [totalIncomeDec doubleValue] &gt; 0 ? [totalIncomeDec doubleValue] : 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>技术总是需要在不断地学习，实践中获得进步，最近看到一篇文章挺好的，拿出来跟大家分享一下。</p>
+<p><a href="http://www.cocoachina.com/ios/20160331/15832.html" target="_blank" rel="external">链接在这里</a></p>
+<h4 id="1-应用前生产和开发版本的管理。"><a href="#1-应用前生产和开发版本的管理。" class="headerlink" title="1.应用前生产和开发版本的管理。"></a>1.应用前生产和开发版本的管理。</h4><p> 生产和开发版本的区别</p>
+<ul>
+<li>链接的环境不同。</li>
+<li>开发版本的日志输出，生产版本不需要。</li>
+<li><p>为了便于测试而对开发版本的的相应设置进行修改，生产版本需要改过来（例如某些宏定义的设置）。</p>
+<p> 对于以上问题，虽然有些可以通过区分debug和release版本进行区分，但是更多的还是要通过代码的修改来完成。我之前一直的做法就是在工程中这些不同的地方添加//TODO:注释，例如，<br><img src="http://img.blog.csdn.net/20160406163710407" alt="TODO注释列表"><br>然后需要做的就是测试完，打包上线前需要遍历项目中的TODO注释列表，挨个修改代码，切换成正式的版本。（<em>万一有漏掉的，就等着老板屌你吧！</em>）</p>
+<p>很不幸，我之前一直都是这么做的，知道我看到上面的文章，原来可以如此简单的解决如此繁琐而不安全的问题，真是有种发现新大陆的感觉。</p>
+</li>
+</ul>
+<p><strong><em>下面看看高大上的做法，瞬间觉得逼格满满。</em></strong></p>
+<h4 id="2-应用后，使用Xcode的Targets来管理生产和开发版本。"><a href="#2-应用后，使用Xcode的Targets来管理生产和开发版本。" class="headerlink" title="2.应用后，使用Xcode的Targets来管理生产和开发版本。"></a>2.应用后，使用Xcode的Targets来管理生产和开发版本。</h4><p>  相关的设置，在上边提到的文章中都有详细步骤，这里不再赘述。<br>  这里总结一下需要注意的地方：</p>
+<ol>
+<li>开发和正式版本bundleID 不同，最好分别制作证书，不同的Target设置不同证书。</li>
+<li>添加文件时，两个Targets都要选，以保证代码同步，其他设置同理。</li>
+<li>两者桌面icon最好区别一下，以免混淆。</li>
+<li><p><strong><em>最重要的一点：提交打包的时候不要选错Target!!!。</em></strong></p>
+<p>自此测试人员和开发人员可以同时安装两个版本的app,再也不会出现一会要测试环境，一会儿要正式环境的问题，同一份代码简单切换Targets轻松搞定。<br><img src="http://img.blog.csdn.net/20160406165711633" alt="附截图一张"></p>
+</li>
+</ol>
 
       
 
@@ -302,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/01/23/金融类app数值精确计算问题/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/04/使用Xcode的Targets来管理开发和生产版本的构建/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -316,18 +316,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/23/部署Hexo博客填坑记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          部署Hexo博客填坑记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/01/23/iOS-项目自动化打包实践/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">iOS 项目自动化打包实践</div>
+    <a href="/2017/02/04/iOS-app各种图片尺寸（Icon-Launchimg-应用市场）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS app各种图片尺寸（Icon,Launchimg,应用市场） </div>
       <i class="icon-circle-right"></i>
     </a>
   

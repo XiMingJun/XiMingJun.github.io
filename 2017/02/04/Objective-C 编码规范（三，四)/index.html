@@ -6,21 +6,81 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>金融类app数值精确计算问题 | 蜗牛yu梦想</title>
+  <title>Objective-C 编码规范（三，四） | 蜗牛yu梦想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
+  <meta name="description" content="目录
+
+3 注释
+3.1 声明部分的注释
+3.2 实现部分的注释
+3.3 对象所有权
+3.4 方法声明注释
+3.5 属性的注释
+
+
+ 4  代码组织
+4.1 条件语句
+4.2 实现文件目录结构
+
+
+
+
+3  注释
+3.1 声明部分的注释
+【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。
+
+123456// A delegate for NSApplication to">
 <meta property="og:type" content="article">
-<meta property="og:title" content="金融类app数值精确计算问题">
-<meta property="og:url" content="http://yoursite.com/2017/01/23/金融类app数值精确计算问题/index.html">
+<meta property="og:title" content="Objective-C 编码规范（三，四）">
+<meta property="og:url" content="http://yoursite.com/2017/02/04/Objective-C 编码规范（三，四)/index.html">
 <meta property="og:site_name" content="蜗牛yu梦想">
-<meta property="og:description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
-<meta property="og:updated_time" content="2017-01-23T06:49:47.000Z">
+<meta property="og:description" content="目录
+
+3 注释
+3.1 声明部分的注释
+3.2 实现部分的注释
+3.3 对象所有权
+3.4 方法声明注释
+3.5 属性的注释
+
+
+ 4  代码组织
+4.1 条件语句
+4.2 实现文件目录结构
+
+
+
+
+3  注释
+3.1 声明部分的注释
+【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。
+
+123456// A delegate for NSApplication to">
+<meta property="og:updated_time" content="2017-03-15T04:39:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="金融类app数值精确计算问题">
-<meta name="twitter:description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
+<meta name="twitter:title" content="Objective-C 编码规范（三，四）">
+<meta name="twitter:description" content="目录
+
+3 注释
+3.1 声明部分的注释
+3.2 实现部分的注释
+3.3 对象所有权
+3.4 方法声明注释
+3.5 属性的注释
+
+
+ 4  代码组织
+4.1 条件语句
+4.2 实现文件目录结构
+
+
+
+
+3  注释
+3.1 声明部分的注释
+【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。
+
+123456// A delegate for NSApplication to">
   
     <link rel="alternative" href="/atom.xml" title="蜗牛yu梦想" type="application/atom+xml">
   
@@ -156,69 +216,82 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-金融类app数值精确计算问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Objective-C 编码规范（三，四)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      金融类app数值精确计算问题
+      Objective-C 编码规范（三，四）
     </h1>
   
 
         
-        <a href="/2017/01/23/金融类app数值精确计算问题/" class="archive-article-date">
-  	<time datetime="2017-01-23T03:54:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-23</time>
+        <a href="/2017/02/04/Objective-C 编码规范（三，四)/" class="archive-article-date">
+  	<time datetime="2017-02-04T06:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="金融类app各种数值的精确计算问题"><a href="#金融类app各种数值的精确计算问题" class="headerlink" title="金融类app各种数值的精确计算问题"></a>金融类app各种数值的精确计算问题</h3><pre><code>最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-</code></pre><h4 id="1-简单粗暴的方法—doubleValue解决"><a href="#1-简单粗暴的方法—doubleValue解决" class="headerlink" title="1.简单粗暴的方法—doubleValue解决"></a>1.简单粗暴的方法—doubleValue解决</h4><pre><code>刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果也会出现不准确的问题，一个最近踩过的坑就是用户再输入投资金额的时候会对自己账户中的可用余额进行判断，以确定余额是否充足，测试的时候输入很多数据都没问题，但线上用户大量数据就会出现偶尔数据错误，用户输入金额明明和可用余额一样，但判断的时候就会提示可用余额不足，老板使用过程中也遇到过，还找了我好几次，汗，都是之前开发人员的坑。所以记住这丫简单粗暴的方法针对金融类的对数据精度及其敏感的项目不可取。
-</code></pre><h4 id="2-明智之举—NSDecimalNumber"><a href="#2-明智之举—NSDecimalNumber" class="headerlink" title="2.明智之举—NSDecimalNumber"></a>2.明智之举—NSDecimalNumber</h4><p>  NSDecimalNumber是苹果提供的专门金融货币精确数值计算的API。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">+ (instancetype)decimalNumberHandlerWithRoundingMode:(NSRoundingMode)roundingMode</div><div class="line">                                               scale:(short)scale</div><div class="line">                                    raiseOnExactness:(BOOL)raiseOnExactness</div><div class="line">                                     raiseOnOverflow:(BOOL)raiseOnOverflow</div><div class="line">                                    raiseOnUnderflow:(BOOL)raiseOnUnderflow</div><div class="line">                                 raiseOnDivideByZero:(BOOL)raiseOnDivideByZero</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>roundingMode</td>
-<td style="text-align:center">要使用的舍入模式，有四种值： NSRoundUp, NSRoundDown, NSRoundPlain, and NSRoundBankers</td>
-</tr>
-<tr>
-<td>scale</td>
-<td style="text-align:center">结果保留几位小数</td>
-</tr>
-<tr>
-<td>raiseOnExactness</td>
-<td style="text-align:center">发生精确错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnOverflow</td>
-<td style="text-align:center">发生溢出错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnUnderflow</td>
-<td style="text-align:center">发生不足错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnDivideByZero</td>
-<td style="text-align:center">被0除时是否抛出异常，一般为YES</td>
-</tr>
-</tbody>
-</table>
-<h5 id="2-1-NSDecimalNumber-的使用。"><a href="#2-1-NSDecimalNumber-的使用。" class="headerlink" title="2.1 NSDecimalNumber 的使用。"></a>2.1 NSDecimalNumber 的使用。</h5><p>  NSDecimalNumber是进行数值计算的对象，ji所有的加减乘除，幂运算操作对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundBankers</div><div class="line">                                                                                         scale:2</div><div class="line">                                                                              raiseOnExactness:NO</div><div class="line">                                                                               raiseOnOverflow:NO</div><div class="line">                                                                              raiseOnUnderflow:NO</div><div class="line">                                                                           raiseOnDivideByZero:YES];</div><div class="line">NSDecimalNumber *num1           = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%@&quot;,@&quot;2.37&quot;]];</div><div class="line">NSDecimalNumber *num2           = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%@&quot;,@&quot;15.89&quot;]];</div><div class="line"></div><div class="line">//加</div><div class="line">NSDecimalNumber *addResult      = [num1 decimalNumberByAdding:num2</div><div class="line">                                                 withBehavior:handler];</div><div class="line">//减</div><div class="line">NSDecimalNumber *subtractResult = [num1 decimalNumberBySubtracting:num2</div><div class="line">                                                      withBehavior:handler];</div><div class="line">//乘</div><div class="line">NSDecimalNumber *multiplyResult = [num1 decimalNumberByMultiplyingBy:num2</div><div class="line">                                                        withBehavior:handler];</div><div class="line">//除</div><div class="line">NSDecimalNumber *divideResult   = [num1 decimalNumberByDividingBy:num2</div><div class="line">                                                   withBehavior:handler];</div><div class="line">//平方</div><div class="line">NSDecimalNumber *powerResult    = [num1 decimalNumberByRaisingToPower:2</div><div class="line">                                                      withBehavior:handler];</div><div class="line">NSLog(@&quot;\n%f\n%f\n%f\n%f\n%f&quot;,[addResult doubleValue],[subtractResult doubleValue],[multiplyResult doubleValue],[divideResult doubleValue],[powerResult doubleValue]);</div></pre></td></tr></table></figure>
-<p>这样就能够很好地解决金融类app货币单位精确计算的问题。但有一点需要注意的是如果计算公式比较长，那么withBehavior应该在最后一步使用，切不可在计算过程中进行舍入操作，相信有点数学常识的同学都能明白这个问题。<br>如下：等额本息的预计收益计算<br> <em>*  公式： 每月本息还款额=(投资金额</em>月利率<em>(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> *  等额本息标的收益计算</div><div class="line"> *  公式： 每月本息还款额=(投资金额*月利率*(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</div><div class="line"> *  @param interest     年化收益</div><div class="line"> *  @param investAmount 投资金额</div><div class="line"> *  @param selectBid    选择的标</div><div class="line"> *</div><div class="line"> *  @return 收益</div><div class="line"> */</div><div class="line">+ (double)calculatePrincipalAndInterestBidWithInvestInterest:(double)interest</div><div class="line">                                                      amount:(NSString *)investAmount</div><div class="line">                                                         bid:(Bid *)selectBid&#123;</div><div class="line">    </div><div class="line">    NSDecimalNumberHandler *roundBanker = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundBankers</div><div class="line">                                                                                                 scale:2.0f</div><div class="line">                                                                                      raiseOnExactness:NO</div><div class="line">                                                                                       raiseOnOverflow:NO</div><div class="line">                                                                                      raiseOnUnderflow:NO</div><div class="line">                                                                                   raiseOnDivideByZero:YES];</div><div class="line">    NSDecimalNumber *investAmountDec = [[NSDecimalNumber alloc] initWithString:investAmount];//投资金额</div><div class="line">    NSDecimalNumber *monthInterestDec = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,interest/100]] decimalNumberByDividingBy:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,12.00]]];//月利率</div><div class="line">    </div><div class="line">    double month = selectBid.creditPeriod;//标的募集期数</div><div class="line">    if (selectBid.creditType == CreditType_DaylyOneOffPayment) &#123;</div><div class="line">        //按天标,转化为月份</div><div class="line">        month = month/30.00;</div><div class="line">    &#125;</div><div class="line">    NSDecimalNumber *monthDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,month]];//还款月数</div><div class="line">//    *  公式： 每月本息还款额=(投资金额*月利率*(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</div><div class="line">    NSDecimalNumber *decNum1 = [[[[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]] decimalNumberByAdding:monthInterestDec] decimalNumberByRaisingToPower:month] decimalNumberByMultiplyingBy:monthInterestDec] decimalNumberByMultiplyingBy:investAmountDec];</div><div class="line">    NSDecimalNumber *decNum2 = [[[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]] decimalNumberByAdding:monthInterestDec] decimalNumberByRaisingToPower:month] decimalNumberBySubtracting:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]]];</div><div class="line">    NSDecimalNumber *monthIncomeDec = [decNum1 decimalNumberByDividingBy:decNum2];//月本息还款额</div><div class="line">    NSDecimalNumber *totalIncomeDec = [[monthDec decimalNumberByMultiplyingBy:monthIncomeDec] decimalNumberBySubtracting:investAmountDec withBehavior:roundBanker];//总还款额 - 本金 = 总收益</div><div class="line">    return [totalIncomeDec doubleValue] &gt; 0 ? [totalIncomeDec doubleValue] : 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+        <p><a name="TOC"></a>目录</p>
+<ul>
+<li><a href="#name">3 注释</a><ul>
+<li><a href="#fileName">3.1 声明部分的注释</a></li>
+<li><a href="#Objective-C++">3.2 实现部分的注释</a></li>
+<li><a href="#className">3.3 对象所有权</a></li>
+<li><a href="#ClassExternName">3.4 方法声明注释</a></li>
+<li><a href="#Objective-CMethodName">3.5 属性的注释</a></li>
+</ul>
+</li>
+<li><a href="#Code"> 4  代码组织</a><ul>
+<li><a href="#if">4.1 条件语句</a></li>
+<li><a href="#doc">4.2 实现文件目录结构</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><a name="name"></a>3  注释</p>
+<h3 id="3-1-声明部分的注释"><a href="#3-1-声明部分的注释" class="headerlink" title="3.1 声明部分的注释"></a><a name="fileName"></a>3.1 声明部分的注释</h3><blockquote>
+<p>【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// A delegate for NSApplication to handle notifications about app </div><div class="line">// launch and shutdown. Owned by the main app controller.</div><div class="line"> @interface MyAppDelegate : NSObject &#123;  </div><div class="line"> ...</div><div class="line"> &#125;</div><div class="line"> @end</div></pre></td></tr></table></figure>
+<p>   如果你已经在文件头部详细描述了接口，可以直接说明 “完整的描述请参见文件头部”，但是一定要有这部分注释。<br>另外，公共接口的每个方法，都应该有注释来解释它的作用、参数、返回值以及其它影响。<br>    为类的线程安全性作注释，如果有的话。如果类的实例可以被多个线程访问，记得注释多线程条件下的使用规则。</p>
+<hr>
+<h3 id="3-2-实现部分的注释"><a href="#3-2-实现部分的注释" class="headerlink" title="3.2 实现部分的注释"></a><a name=" Objective-C++"></a>3.2 实现部分的注释</h3><blockquote>
+<p>【建议】使用 | 来引用注释中的变量名及符号名而不是使用引号。</p>
+</blockquote>
+<p>这会避免二义性，尤其是当符号是一个常用词汇，这使用语句读起来很糟糕。例如，对于符号 count ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">// Sometimes we need |count| to be less than zero.</div></pre></td></tr></table></figure></p>
+<p>或者当引用已经包含引号的符号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">// Remember to call |StringWithoutSpaces(&quot;foo bar baz&quot;)|</div></pre></td></tr></table></figure></p>
+<p>注：不过中文注释的话可以忽略该条</p>
+<h3 id="3-3-对象所有权"><a href="#3-3-对象所有权" class="headerlink" title="3.3 对象所有权"></a><a name="className"></a>3.3 对象所有权</h3><blockquote>
+<p>【建议】当与 Objective-C 最常规的作法不同时，尽量使指针的所有权模型尽量明确。</p>
+</blockquote>
+<pre><code> 继承自 NSObject 的对象的实例变量指针，通常被假定是强引用关系（retained），某些情况下也可以注释为弱引用（weak）或使用 __weak 生命周期限定符。同样，声明的属性如果没有被类 retained，必须指定是弱引用或赋予 @property 属性。然而，Mac 软件中标记上 IBOutlets 的实例变量，被认为是不会被类 retained 的。
+当实例变量指向 CoreFoundation、C++ 或者其它非 Objective-C 对象时，不论指针是否会被 retained，都需要使用 __strong 和 __weak 类型修饰符明确指明。CoreFoundation 和其它非 Objective-C 对象指针需要显式的内存管理，即便使用了自动引用计数或垃圾回收机制。当不允许使用 __weak 类型修饰符（比如，使用 clang 编译时的 C++ 成员变量），应使用注释替代说明。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@interface MyDelegate : NSObject &#123; </div><div class="line"> @private   IBOutlet NSButton *okButton_;  // normal NSControl; implicitly weak on Mac only   </div><div class="line"></div><div class="line"> AnObjcObject* doohickey_;  // my doohickey  </div><div class="line">__weak MyObjcParent *parent_;  // so we can send msgs back (owns me)    // non-NSObject pointers...  </div><div class="line"></div><div class="line">__strong CWackyCPPClass *wacky_;  // some cross-platform object   </div><div class="line"></div><div class="line">__strong CFDictionaryRef *dict_;</div><div class="line"> &#125;</div><div class="line"> @property(strong, nonatomic) NSString *doohickey;</div><div class="line"> @property(weak, nonatomic) NSString *parent;</div><div class="line"> @end</div></pre></td></tr></table></figure>
+<h3 id="3-4-方法声明注释"><a href="#3-4-方法声明注释" class="headerlink" title="3.4 方法声明注释"></a><a name="ClassExternName"></a>3.4 方法声明注释</h3><blockquote>
+<p>【建议】声明的方法，要注释方法功能，参数意义，返回值，格式如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//含参数，有返回值的方法注释</div><div class="line">/**</div><div class="line"> *  初始化方法-2</div><div class="line"> *  @param frame frame</div><div class="line"> *  @param array 标题数组</div><div class="line"> *  @param index 默认选中标题索引</div><div class="line"> *  @return WJSegmentView</div><div class="line"> */</div><div class="line">- (instancetype)initWithFrame:(CGRect)frame</div><div class="line">                   titleArray:(NSArray *)array</div><div class="line">                     sellectIndex:(long)index;</div><div class="line">      </div><div class="line">//无参，无返回值方法注释</div><div class="line">/**移除键盘*/</div><div class="line">+ (void)removeKeyBoard&#123;</div><div class="line">    NSArray *windows = [[UIApplication sharedApplication] windows];</div><div class="line">    for(UIWindow *window in windows)&#123;</div><div class="line">        [CommonMethods textViewTextFieldResignFirstResponder:window];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-5-属性的注释"><a href="#3-5-属性的注释" class="headerlink" title="3.5 属性的注释"></a><a name="varName"></a>3.5 属性的注释</h3><blockquote>
+<p>【建议】在声明文件中声明的实例变量在上一行加注释。或者直接在实例变量后边注释，与项目已有风格保持一致。<br>格式如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@property (nonatomic,copy)NSString *loginID;//登录ID</div><div class="line">@property (nonatomic,copy)NSString *userName;//用户名</div><div class="line">@property (nonatomic,copy)NSString *realName;//真是姓名</div><div class="line">   @property (nonatomic,copy)NSString *shareUrl;//二维码分享链接</div><div class="line">   @property (nonatomic,copy)NSString *appShareUrl;//社交分享链接</div><div class="line">   @property (nonatomic,copy)NSString *headPortraitAddr;//用户头像</div><div class="line"></div><div class="line">/**标题数组*/</div><div class="line">@property (nonatomic,retain)NSArray *titleArray;</div><div class="line">/**选中按钮底部背景*/</div><div class="line">@property (nonatomic,retain)UIView  *backgroundView;</div><div class="line">/**默认选中索引*/</div><div class="line">  @property (nonatomic,assign)long     selectIndex;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="4-代码组织"><a href="#4-代码组织" class="headerlink" title="4 代码组织"></a><a name="Code"></a>4 代码组织</h2><h3 id="4-1-条件语句"><a href="#4-1-条件语句" class="headerlink" title="4.1 条件语句"></a><a name="if"></a>4.1 条件语句</h3><p>当使用条件语句编码时，左手边的代码应该是”golden” 或 “happy”路径。也就是不要嵌套if语句，多个返回语句也是OK。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- (void)someMethod &#123;  </div><div class="line"> if (![someOther boolValue]) &#123;   </div><div class="line">  return;  </div><div class="line"> &#125;   </div><div class="line"> //Do something important</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>【建议】出现超过两层循环的代码，用函数或block替代<br>// 为了简化示例，没有错误处理，并使用了伪代码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// 糟糕的例子</div><div class="line">- (Task *)creatTaskWithPath:(NSString *)path &#123;</div><div class="line">    Task *aTask;</div><div class="line">    if ([path isURL]) &#123;</div><div class="line">        if ([fileManager isWritableFileAtPath:path]) &#123;</div><div class="line">            if (![taskManager hasTaskWithPath:path]) &#123;</div><div class="line">                aTask = [[Task alloc] initWithPath:path];</div><div class="line">            &#125;</div><div class="line">            else &#123;</div><div class="line">                return nil;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        else &#123;</div><div class="line">            return nil;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    else &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line">    return aTask;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 改写的例子</div><div class="line">- (Task *)creatTaskWithPath:(NSString *)path &#123;</div><div class="line">    if (![path isURL]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (![fileManager isWritableFileAtPath:path]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if ([taskManager hasTaskWithPath:path]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Task *aTask = [[Task alloc] initWithPath:path];</div><div class="line">    return aTask;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="4-2-实现文件目录结构"><a href="#4-2-实现文件目录结构" class="headerlink" title="4.2 实现文件目录结构"></a><a name="doc"></a>4.2 实现文件目录结构</h3><blockquote>
+<p>【建议】 在函数分组和protocol/delegate实现中使用#pragma mark -来分类方法，要遵循以下一般结构：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">#pragma mark - Lifecycle</div><div class="line"></div><div class="line">- (instancetype)init &#123;&#125;</div><div class="line">- (void)dealloc &#123;&#125;</div><div class="line">- (void)viewDidLoad &#123;&#125;</div><div class="line">- (void)viewWillAppear:(BOOL)animated &#123;&#125;</div><div class="line">- (void)didReceiveMemoryWarning &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Custom Accessors</div><div class="line"></div><div class="line">- (void)setCustomProperty:(id)value &#123;&#125;</div><div class="line">- (id)customProperty &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - IBActions</div><div class="line"></div><div class="line">- (IBAction)submitData:(id)sender &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Public</div><div class="line"></div><div class="line">- (void)publicMethod &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Private</div><div class="line"></div><div class="line">- (void)privateMethod &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Protocol conformance</div><div class="line">#pragma mark - UITextFieldDelegate</div><div class="line">#pragma mark - UITableViewDataSource</div><div class="line">#pragma mark - UITableViewDelegate</div><div class="line"></div><div class="line">#pragma mark - NSCopying</div><div class="line"></div><div class="line">- (id)copyWithZone:(NSZone *)zone &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - NSObject</div><div class="line"></div><div class="line">- (NSString *)description &#123;&#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -302,7 +375,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/01/23/金融类app数值精确计算问题/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/04/Objective-C 编码规范（三，四)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -316,18 +389,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/23/部署Hexo博客填坑记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/02/04/Objective-C编码规范（二/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          部署Hexo博客填坑记
+          Objective-C 编码规范(二)
         
       </div>
     </a>
   
   
-    <a href="/2017/01/23/iOS-项目自动化打包实践/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">iOS 项目自动化打包实践</div>
+    <a href="/2017/01/23/测试/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">部署Hexo博客新家小记</div>
       <i class="icon-circle-right"></i>
     </a>
   

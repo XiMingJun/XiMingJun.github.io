@@ -6,21 +6,81 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>金融类app数值精确计算问题 | 蜗牛yu梦想</title>
+  <title>Objective-C 编码规范(一) | 蜗牛yu梦想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
+  <meta name="description" content="目录
+1 留白和格式
+
+1.1 空格 VS 制表符
+1.2 花括号
+1.3 列数
+1.4 方法的声明和定义
+1.5 方法调用
+1.6 协议名
+1.7 块（闭包）
+1.8 枚举类型
+1.9 Case语句
+
+
+参考
+
+
+1 留白和格式1.1 空格 VS 制表符
+
+【建议】使用空格进行缩进。
+
+ 不要在工程里使用Tab键，使用空格来进行缩进。通过设置 Xcode &amp;gt; Preferences &amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="金融类app数值精确计算问题">
-<meta property="og:url" content="http://yoursite.com/2017/01/23/金融类app数值精确计算问题/index.html">
+<meta property="og:title" content="Objective-C 编码规范(一)">
+<meta property="og:url" content="http://yoursite.com/2017/02/04/Objective-C 编码规范(一)/index.html">
 <meta property="og:site_name" content="蜗牛yu梦想">
-<meta property="og:description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
-<meta property="og:updated_time" content="2017-01-23T06:49:47.000Z">
+<meta property="og:description" content="目录
+1 留白和格式
+
+1.1 空格 VS 制表符
+1.2 花括号
+1.3 列数
+1.4 方法的声明和定义
+1.5 方法调用
+1.6 协议名
+1.7 块（闭包）
+1.8 枚举类型
+1.9 Case语句
+
+
+参考
+
+
+1 留白和格式1.1 空格 VS 制表符
+
+【建议】使用空格进行缩进。
+
+ 不要在工程里使用Tab键，使用空格来进行缩进。通过设置 Xcode &amp;gt; Preferences &amp;gt">
+<meta property="og:updated_time" content="2017-03-15T04:39:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="金融类app数值精确计算问题">
-<meta name="twitter:description" content="金融类app各种数值的精确计算问题最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-1.简单粗暴的方法—doubleValue解决刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果">
+<meta name="twitter:title" content="Objective-C 编码规范(一)">
+<meta name="twitter:description" content="目录
+1 留白和格式
+
+1.1 空格 VS 制表符
+1.2 花括号
+1.3 列数
+1.4 方法的声明和定义
+1.5 方法调用
+1.6 协议名
+1.7 块（闭包）
+1.8 枚举类型
+1.9 Case语句
+
+
+参考
+
+
+1 留白和格式1.1 空格 VS 制表符
+
+【建议】使用空格进行缩进。
+
+ 不要在工程里使用Tab键，使用空格来进行缩进。通过设置 Xcode &amp;gt; Preferences &amp;gt">
   
     <link rel="alternative" href="/atom.xml" title="蜗牛yu梦想" type="application/atom+xml">
   
@@ -156,68 +216,124 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-金融类app数值精确计算问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Objective-C 编码规范(一)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      金融类app数值精确计算问题
+      Objective-C 编码规范(一)
     </h1>
   
 
         
-        <a href="/2017/01/23/金融类app数值精确计算问题/" class="archive-article-date">
-  	<time datetime="2017-01-23T03:54:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-23</time>
+        <a href="/2017/02/04/Objective-C 编码规范(一)/" class="archive-article-date">
+  	<time datetime="2017-02-04T07:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="金融类app各种数值的精确计算问题"><a href="#金融类app各种数值的精确计算问题" class="headerlink" title="金融类app各种数值的精确计算问题"></a>金融类app各种数值的精确计算问题</h3><pre><code>最近总算闲下来了，有时间把前段时间app里边踩到的坑总结下，既金融类app中有关数值精确计算的问题。
-</code></pre><h4 id="1-简单粗暴的方法—doubleValue解决"><a href="#1-简单粗暴的方法—doubleValue解决" class="headerlink" title="1.简单粗暴的方法—doubleValue解决"></a>1.简单粗暴的方法—doubleValue解决</h4><pre><code>刚开始接手的项目中关于数值的计算就是按照字符串直接转doubleValue的方式转化为后进行加减乘除运算。这样做在大多数情况下是不会有问题的，但如果经过全面测试的话，有些字符串转double会出现精度损失问题，计算结果也会出现不准确的问题，一个最近踩过的坑就是用户再输入投资金额的时候会对自己账户中的可用余额进行判断，以确定余额是否充足，测试的时候输入很多数据都没问题，但线上用户大量数据就会出现偶尔数据错误，用户输入金额明明和可用余额一样，但判断的时候就会提示可用余额不足，老板使用过程中也遇到过，还找了我好几次，汗，都是之前开发人员的坑。所以记住这丫简单粗暴的方法针对金融类的对数据精度及其敏感的项目不可取。
-</code></pre><h4 id="2-明智之举—NSDecimalNumber"><a href="#2-明智之举—NSDecimalNumber" class="headerlink" title="2.明智之举—NSDecimalNumber"></a>2.明智之举—NSDecimalNumber</h4><p>  NSDecimalNumber是苹果提供的专门金融货币精确数值计算的API。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">+ (instancetype)decimalNumberHandlerWithRoundingMode:(NSRoundingMode)roundingMode</div><div class="line">                                               scale:(short)scale</div><div class="line">                                    raiseOnExactness:(BOOL)raiseOnExactness</div><div class="line">                                     raiseOnOverflow:(BOOL)raiseOnOverflow</div><div class="line">                                    raiseOnUnderflow:(BOOL)raiseOnUnderflow</div><div class="line">                                 raiseOnDivideByZero:(BOOL)raiseOnDivideByZero</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>roundingMode</td>
-<td style="text-align:center">要使用的舍入模式，有四种值： NSRoundUp, NSRoundDown, NSRoundPlain, and NSRoundBankers</td>
-</tr>
-<tr>
-<td>scale</td>
-<td style="text-align:center">结果保留几位小数</td>
-</tr>
-<tr>
-<td>raiseOnExactness</td>
-<td style="text-align:center">发生精确错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnOverflow</td>
-<td style="text-align:center">发生溢出错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnUnderflow</td>
-<td style="text-align:center">发生不足错误时是否抛出异常，一般为NO</td>
-</tr>
-<tr>
-<td>raiseOnDivideByZero</td>
-<td style="text-align:center">被0除时是否抛出异常，一般为YES</td>
-</tr>
-</tbody>
-</table>
-<h5 id="2-1-NSDecimalNumber-的使用。"><a href="#2-1-NSDecimalNumber-的使用。" class="headerlink" title="2.1 NSDecimalNumber 的使用。"></a>2.1 NSDecimalNumber 的使用。</h5><p>  NSDecimalNumber是进行数值计算的对象，ji所有的加减乘除，幂运算操作对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundBankers</div><div class="line">                                                                                         scale:2</div><div class="line">                                                                              raiseOnExactness:NO</div><div class="line">                                                                               raiseOnOverflow:NO</div><div class="line">                                                                              raiseOnUnderflow:NO</div><div class="line">                                                                           raiseOnDivideByZero:YES];</div><div class="line">NSDecimalNumber *num1           = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%@&quot;,@&quot;2.37&quot;]];</div><div class="line">NSDecimalNumber *num2           = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%@&quot;,@&quot;15.89&quot;]];</div><div class="line"></div><div class="line">//加</div><div class="line">NSDecimalNumber *addResult      = [num1 decimalNumberByAdding:num2</div><div class="line">                                                 withBehavior:handler];</div><div class="line">//减</div><div class="line">NSDecimalNumber *subtractResult = [num1 decimalNumberBySubtracting:num2</div><div class="line">                                                      withBehavior:handler];</div><div class="line">//乘</div><div class="line">NSDecimalNumber *multiplyResult = [num1 decimalNumberByMultiplyingBy:num2</div><div class="line">                                                        withBehavior:handler];</div><div class="line">//除</div><div class="line">NSDecimalNumber *divideResult   = [num1 decimalNumberByDividingBy:num2</div><div class="line">                                                   withBehavior:handler];</div><div class="line">//平方</div><div class="line">NSDecimalNumber *powerResult    = [num1 decimalNumberByRaisingToPower:2</div><div class="line">                                                      withBehavior:handler];</div><div class="line">NSLog(@&quot;\n%f\n%f\n%f\n%f\n%f&quot;,[addResult doubleValue],[subtractResult doubleValue],[multiplyResult doubleValue],[divideResult doubleValue],[powerResult doubleValue]);</div></pre></td></tr></table></figure>
-<p>这样就能够很好地解决金融类app货币单位精确计算的问题。但有一点需要注意的是如果计算公式比较长，那么withBehavior应该在最后一步使用，切不可在计算过程中进行舍入操作，相信有点数学常识的同学都能明白这个问题。<br>如下：等额本息的预计收益计算<br> <em>*  公式： 每月本息还款额=(投资金额</em>月利率<em>(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> *  等额本息标的收益计算</div><div class="line"> *  公式： 每月本息还款额=(投资金额*月利率*(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</div><div class="line"> *  @param interest     年化收益</div><div class="line"> *  @param investAmount 投资金额</div><div class="line"> *  @param selectBid    选择的标</div><div class="line"> *</div><div class="line"> *  @return 收益</div><div class="line"> */</div><div class="line">+ (double)calculatePrincipalAndInterestBidWithInvestInterest:(double)interest</div><div class="line">                                                      amount:(NSString *)investAmount</div><div class="line">                                                         bid:(Bid *)selectBid&#123;</div><div class="line">    </div><div class="line">    NSDecimalNumberHandler *roundBanker = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundBankers</div><div class="line">                                                                                                 scale:2.0f</div><div class="line">                                                                                      raiseOnExactness:NO</div><div class="line">                                                                                       raiseOnOverflow:NO</div><div class="line">                                                                                      raiseOnUnderflow:NO</div><div class="line">                                                                                   raiseOnDivideByZero:YES];</div><div class="line">    NSDecimalNumber *investAmountDec = [[NSDecimalNumber alloc] initWithString:investAmount];//投资金额</div><div class="line">    NSDecimalNumber *monthInterestDec = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,interest/100]] decimalNumberByDividingBy:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,12.00]]];//月利率</div><div class="line">    </div><div class="line">    double month = selectBid.creditPeriod;//标的募集期数</div><div class="line">    if (selectBid.creditType == CreditType_DaylyOneOffPayment) &#123;</div><div class="line">        //按天标,转化为月份</div><div class="line">        month = month/30.00;</div><div class="line">    &#125;</div><div class="line">    NSDecimalNumber *monthDec = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%f&quot;,month]];//还款月数</div><div class="line">//    *  公式： 每月本息还款额=(投资金额*月利率*(1+月利率)^还款月数)/(((1+月利率)^还款月数)-1)</div><div class="line">    NSDecimalNumber *decNum1 = [[[[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]] decimalNumberByAdding:monthInterestDec] decimalNumberByRaisingToPower:month] decimalNumberByMultiplyingBy:monthInterestDec] decimalNumberByMultiplyingBy:investAmountDec];</div><div class="line">    NSDecimalNumber *decNum2 = [[[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]] decimalNumberByAdding:monthInterestDec] decimalNumberByRaisingToPower:month] decimalNumberBySubtracting:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@&quot;%d&quot;,1]]];</div><div class="line">    NSDecimalNumber *monthIncomeDec = [decNum1 decimalNumberByDividingBy:decNum2];//月本息还款额</div><div class="line">    NSDecimalNumber *totalIncomeDec = [[monthDec decimalNumberByMultiplyingBy:monthIncomeDec] decimalNumberBySubtracting:investAmountDec withBehavior:roundBanker];//总还款额 - 本金 = 总收益</div><div class="line">    return [totalIncomeDec doubleValue] &gt; 0 ? [totalIncomeDec doubleValue] : 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a><a name="TOC"></a>目录</h2><ul>
+<li><p><a href="#">1 留白和格式</a></p>
+<ul>
+<li><a href="#">1.1 空格 VS 制表符</a></li>
+<li><a href="#">1.2 花括号</a></li>
+<li><a href="#">1.3 列数</a></li>
+<li><a href="#">1.4 方法的声明和定义</a></li>
+<li><a href="#">1.5 方法调用</a></li>
+<li><a href="#">1.6 协议名</a></li>
+<li><a href="#">1.7 块（闭包）</a></li>
+<li><a href="#">1.8 枚举类型</a></li>
+<li><a href="#">1.9 Case语句</a></li>
+</ul>
+</li>
+<li><p><a href="#reference">参考</a></p>
+</li>
+</ul>
+<h2 id="1-留白和格式"><a href="#1-留白和格式" class="headerlink" title="1 留白和格式"></a><a name="space"></a>1 留白和格式</h2><h3 id="1-1-空格-VS-制表符"><a href="#1-1-空格-VS-制表符" class="headerlink" title="1.1 空格 VS 制表符"></a><a name="space-basic-principle"></a>1.1 空格 VS 制表符</h3><hr>
+<blockquote>
+<p>【建议】使用空格进行缩进。</p>
+</blockquote>
+<p> 不要在工程里使用Tab键，使用空格来进行缩进。<br>通过设置 Xcode &gt; Preferences &gt; Text Editing 将Tab和自动缩进都设置为4个空格。</p>
+<ul>
+<li>类方法声明在方法类型与返回类型之间要有空格。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> // 糟糕</div><div class="line">-(void)methodName:(NSString *)string; </div><div class="line">// OK</div><div class="line"> - (void)methodName:(NSString *)string;</div></pre></td></tr></table></figure>
+<ul>
+<li>条件判断的括号内侧不应有空格。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 糟糕</div><div class="line">if ( a &lt; b ) &#123; </div><div class="line">// something</div><div class="line">&#125; </div><div class="line">// OK</div><div class="line">if (a &lt; b) &#123;</div><div class="line"> // something</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>关系运算符（如  &gt;= 、 != ）和逻辑运算符（如  &amp;&amp; 、 || ）两边要有空格。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  // OK</div><div class="line">(someValue &gt; 100)? YES : NO </div><div class="line">// OK</div><div class="line">(items)?: @[]</div></pre></td></tr></table></figure>
+<p>  二元算数运算符两侧是否加空格不确定，根据情况自己定。一元运算符与操作数之前没有空格。<br>多个参数逗号后留一个空格（这也符合正常的西文语法）。</p>
+<h3 id="1-2-花括号"><a href="#1-2-花括号" class="headerlink" title="1.2 花括号"></a><a></a>1.2 花括号</h3><hr>
+<blockquote>
+<p>【建议】方法大括号和其他大括号(if/else/switch/while 等.)总是在同一行语句打开但在新行中关闭。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if (user.isHappy) &#123;</div><div class="line">    //Do something</div><div class="line">&#125; </div><div class="line">else &#123;</div><div class="line">    //Do something else</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="1-3-列数"><a href="#1-3-列数" class="headerlink" title="1.3 列数"></a><a name="space-column"></a>1.3 列数</h3><hr>
+<blockquote>
+<p>【建议】尽量让你的代码保持在 80 列之内。</p>
+</blockquote>
+<p>通过设置 Xcode &gt; Preferences &gt; Text Editing &gt; Show page guide，来使越界更容易被发现。</p>
+<h3 id="1-4-方法的声明和定义"><a href="#1-4-方法的声明和定义" class="headerlink" title="1.4 方法的声明和定义"></a><a name="naming-method"></a>1.4 方法的声明和定义</h3><hr>
+<blockquote>
+<p>【建议】 +/- 和返回类型之间须使用一个空格，参数列表中只有参数之间可以有空格。</p>
+</blockquote>
+<p>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">+ (NSDate *)dateFromString:(NSString *)string&#123;</div><div class="line">    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];</div><div class="line">    [formatter setDateFormat:@&quot;yyyy-MM-dd HH:mm:ss&quot;];</div><div class="line">    NSDate *date = [formatter dateFromString:string];</div><div class="line">    [formatter release];</div><div class="line">    return date;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  星号前的空格是可选的。当写新的代码时，要与先前代码保持一致。如果一行有非常多的参数，更好的方式是将每个参数单独拆成一行。如果使用多行，将每个参数前的冒号对齐。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (void)doSomethingWith:(GTMFoo *)theFoo	</div><div class="line">                     rect:(NSRect)theRect</div><div class="line">                 interval:(float)theInterval &#123;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>当第一个关键字比其它的短时，保证下一行至少有 4 个空格的缩进。这样可以使关键字垂直对齐，而不是使用冒号对齐：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (void)short:(GTMFoo *)theFoo</div><div class="line">    longKeyword:(NSRect)theRect</div><div class="line">    evenLongerKeyword:(float)theInterval &#123;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="1-5-方法调用"><a href="#1-5-方法调用" class="headerlink" title="1.5 方法调用"></a><a name="naming-protocol"></a>1.5 方法调用</h3><hr>
+<blockquote>
+<p>【建议】方法调用应尽量保持与方法声明的格式一致。当格式的风格有多种选择时，新的代码要与已有代码保持一致。</p>
+</blockquote>
+<p>调用时所有参数应该在同一行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[myObject doFooWith:arg1 name:arg2 error:arg3];</div></pre></td></tr></table></figure></p>
+<p>或者每行一个参数，以冒号对齐：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[myObject doFooWith:arg1</div><div class="line">               name:arg2</div><div class="line">              error:arg3];</div></pre></td></tr></table></figure></p>
+<p>方法定义与方法声明一样，当关键字的长度不足以以冒号对齐时，下一行都要以四个空格进行缩进。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[myObj short:arg1</div><div class="line">   longKeyword:arg2</div><div class="line">   evenLongerKeyword:arg3];</div></pre></td></tr></table></figure></p>
+<h3 id="1-6-协议名"><a href="#1-6-协议名" class="headerlink" title="1.6 协议名"></a><a name="protocol_name"></a>1.6 协议名</h3><hr>
+<blockquote>
+<p>【建议】类型标识符和尖括号内的协议名之间，不能有任何空格。</p>
+</blockquote>
+<p>这条规则适用于类声明、实例变量以及方法声明。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@interface MyProtocoledClass : NSObject&lt;NSWindowDelegate&gt; &#123;</div><div class="line"> @private</div><div class="line">  id&lt;MyFancyDelegate&gt; delegate_;</div><div class="line">&#125;</div><div class="line">- (void)setDelegate:(id&lt;MyFancyDelegate&gt;)aDelegate;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<p>@public 和 @private 访问修饰符应该以一个空格缩进。</p>
+<h3 id="1-7-块（闭包）"><a href="#1-7-块（闭包）" class="headerlink" title=" 1.7 块（闭包）"></a><a name="naming-constant"></a> 1.7 块（闭包）</h3><hr>
+<blockquote>
+<p>【建议】块（block）适合用在 target/selector 模式下创建回调方法时，因为它使代码更易读。块中的代码应该缩进 4 个空格。</p>
+</blockquote>
+<p>取决于块的长度，下列都是合理的风格准则：</p>
+<ul>
+<li><p>如果一行可以写完块，则没必要换行。</p>
+</li>
+<li><p>如果不得不换行，关括号应与块声明的第一个字符对齐。<br> 块内的代码须按 4 空格缩进。</p>
+</li>
+<li><p>如果块太长，比如超过 20 行，建议把它定义成一个局部变量，然后再使用该变量。</p>
+</li>
+<li><p>如果块不带参数，^{ 之间无须空格。如果带有参数，^( 之间无须空格，但 ) { 之间须有一个空格。</p>
+</li>
+<li><p>块内允许按两个空格缩进，但前提是和项目的其它代码保持一致的缩进风格。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">// The entire block fits on one line.</div><div class="line">[operation setCompletionBlock:^&#123; [self onOperationDone]; &#125;];</div><div class="line"></div><div class="line">[operation setCompletionBlock:^&#123;</div><div class="line">    [self.delegate newDataAvailable];</div><div class="line">&#125;];</div><div class="line"></div><div class="line"></div><div class="line">dispatch_async(fileIOQueue_, ^&#123;</div><div class="line">    NSString* path = [self sessionFilePath];</div><div class="line">    if (path) &#123;</div><div class="line">      // ...</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line">[[SessionService sharedService]</div><div class="line">    loadWindowWithCompletionBlock:^(SessionWindow *window) &#123;</div><div class="line">        if (window) &#123;</div><div class="line">          [self windowDidLoad:window];</div><div class="line">        &#125; else &#123;</div><div class="line">          [self errorLoadingWindow];</div><div class="line">        &#125;</div><div class="line">    &#125;];</div><div class="line"></div><div class="line">// An example where the parameter wraps and the block declaration does</div><div class="line">// not fit on the same line as the name.</div><div class="line">[[SessionService sharedService]</div><div class="line">    loadWindowWithCompletionBlock:</div><div class="line">        ^(SessionWindow *window) &#123;</div><div class="line">            if (window) &#123;</div><div class="line">              [self windowDidLoad:window];</div><div class="line">            &#125; else &#123;</div><div class="line">              [self errorLoadingWindow];</div><div class="line">            &#125;</div><div class="line">        &#125;];</div><div class="line"></div><div class="line">// Large blocks can be declared out-of-line.</div><div class="line">void (^largeBlock)(void) = ^&#123;</div><div class="line">    // ...</div><div class="line">&#125;;</div><div class="line">[operationQueue_ addOperationWithBlock:largeBlock];</div></pre></td></tr></table></figure>
+<h3 id="1-8-枚举类型"><a href="#1-8-枚举类型" class="headerlink" title="1.8 枚举类型"></a><a name="abbreviation"></a>1.8 枚举类型</h3><hr>
+<blockquote>
+<p>【建议】当使用enum时，推荐使用新的固定基本类型规格，因为它有更强的类型检查和代码补全。现在SDK有一个宏NS_ENUM()来帮助和鼓励你使用固定的基本类型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">typedef NS_ENUM(NSInteger, RWTLeftMenuTopItemType) &#123;</div><div class="line">  RWTLeftMenuTopItemMain,</div><div class="line">  RWTLeftMenuTopItemShows,</div><div class="line">  RWTLeftMenuTopItemSchedule</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="1-9-Case语句"><a href="#1-9-Case语句" class="headerlink" title="1.9 Case语句"></a><a name="naming-others"></a>1.9 Case语句</h3><hr>
+<blockquote>
+<p>【建议】大括号在case语句中并不是必须的，除非编译器强制要求。当一个case语句包含多行代码时，大括号应该加上。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">switch (condition) &#123;</div><div class="line">  case 1:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">  case 2: &#123;</div><div class="line">    // ...</div><div class="line">    // Multi-line example using braces</div><div class="line">    break;</div><div class="line">  &#125;</div><div class="line">  case 3:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">  default: </div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>有很多次，当相同代码被多个cases使用时，一个fall-through应该被使用。一个fall-through就是在case最后移除’break’语句，这样就能够允许执行流程跳转到下一个case值。为了代码更加清晰，一个fall-through需要注释一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">switch (condition) &#123;</div><div class="line">  case 1:</div><div class="line">    // ** fall-through! **</div><div class="line">  case 2:</div><div class="line">    // code executed for values 1 and 2</div><div class="line">    break;</div><div class="line">  default: </div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当在switch使用枚举类型时，’default’是不需要的。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">RWTLeftMenuTopItemType menuType = RWTLeftMenuTopItemMain;</div><div class="line">switch (menuType) &#123;</div><div class="line">  case RWTLeftMenuTopItemMain:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">  case RWTLeftMenuTopItemShows:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">  case RWTLeftMenuTopItemSchedule:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
 
       
 
@@ -302,7 +418,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/01/23/金融类app数值精确计算问题/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/04/Objective-C 编码规范(一)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -316,18 +432,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/23/部署Hexo博客填坑记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/02/04/iOS-app各种图片尺寸（Icon-Launchimg-应用市场）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          部署Hexo博客填坑记
+          iOS app各种图片尺寸（Icon,Launchimg,应用市场） 
         
       </div>
     </a>
   
   
-    <a href="/2017/01/23/iOS-项目自动化打包实践/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">iOS 项目自动化打包实践</div>
+    <a href="/2017/02/04/Objective-C编码规范（二/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Objective-C 编码规范(二)</div>
       <i class="icon-circle-right"></i>
     </a>
   

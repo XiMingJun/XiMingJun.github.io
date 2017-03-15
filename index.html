@@ -151,6 +151,579 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-使用Xcode的Targets来管理开发和生产版本的构建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/04/使用Xcode的Targets来管理开发和生产版本的构建/">使用Xcode的Targets来管理开发和生产版本的构建.</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/04/使用Xcode的Targets来管理开发和生产版本的构建/" class="archive-article-date">
+  	<time datetime="2017-02-04T07:40:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>技术总是需要在不断地学习，实践中获得进步，最近看到一篇文章挺好的，拿出来跟大家分享一下。</p>
+<p><a href="http://www.cocoachina.com/ios/20160331/15832.html" target="_blank" rel="external">链接在这里</a></p>
+<h4 id="1-应用前生产和开发版本的管理。"><a href="#1-应用前生产和开发版本的管理。" class="headerlink" title="1.应用前生产和开发版本的管理。"></a>1.应用前生产和开发版本的管理。</h4><p> 生产和开发版本的区别</p>
+<ul>
+<li>链接的环境不同。</li>
+<li>开发版本的日志输出，生产版本不需要。</li>
+<li><p>为了便于测试而对开发版本的的相应设置进行修改，生产版本需要改过来（例如某些宏定义的设置）。</p>
+<p> 对于以上问题，虽然有些可以通过区分debug和release版本进行区分，但是更多的还是要通过代码的修改来完成。我之前一直的做法就是在工程中这些不同的地方添加//TODO:注释，例如，<br><img src="http://img.blog.csdn.net/20160406163710407" alt="TODO注释列表"><br>然后需要做的就是测试完，打包上线前需要遍历项目中的TODO注释列表，挨个修改代码，切换成正式的版本。（<em>万一有漏掉的，就等着老板屌你吧！</em>）</p>
+<p>很不幸，我之前一直都是这么做的，知道我看到上面的文章，原来可以如此简单的解决如此繁琐而不安全的问题，真是有种发现新大陆的感觉。</p>
+</li>
+</ul>
+<p><strong><em>下面看看高大上的做法，瞬间觉得逼格满满。</em></strong></p>
+<h4 id="2-应用后，使用Xcode的Targets来管理生产和开发版本。"><a href="#2-应用后，使用Xcode的Targets来管理生产和开发版本。" class="headerlink" title="2.应用后，使用Xcode的Targets来管理生产和开发版本。"></a>2.应用后，使用Xcode的Targets来管理生产和开发版本。</h4><p>  相关的设置，在上边提到的文章中都有详细步骤，这里不再赘述。<br>  这里总结一下需要注意的地方：</p>
+<ol>
+<li>开发和正式版本bundleID 不同，最好分别制作证书，不同的Target设置不同证书。</li>
+<li>添加文件时，两个Targets都要选，以保证代码同步，其他设置同理。</li>
+<li>两者桌面icon最好区别一下，以免混淆。</li>
+<li><p><strong><em>最重要的一点：提交打包的时候不要选错Target!!!。</em></strong></p>
+<p>自此测试人员和开发人员可以同时安装两个版本的app,再也不会出现一会要测试环境，一会儿要正式环境的问题，同一份代码简单切换Targets轻松搞定。<br><img src="http://img.blog.csdn.net/20160406165711633" alt="附截图一张"></p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/04/使用Xcode的Targets来管理开发和生产版本的构建/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-iOS-app各种图片尺寸（Icon-Launchimg-应用市场）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/04/iOS-app各种图片尺寸（Icon-Launchimg-应用市场）/">iOS app各种图片尺寸（Icon,Launchimg,应用市场） </a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/04/iOS-app各种图片尺寸（Icon-Launchimg-应用市场）/" class="archive-article-date">
+  	<time datetime="2017-02-04T07:20:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>启动图尺寸（与应用市场图片尺寸相同）</p>
+<p>320*480</p>
+<p>640*960</p>
+<p>640*1136</p>
+<p>750*1334</p>
+<p>2208*1242</p>
+</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20160421152347930" alt="项目图片各位置图片设置"></p>
+<p>2.Icon尺寸</p>
+<table>
+<thead>
+<tr>
+<th>图片命名</th>
+<th style="text-align:center">尺寸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Icon-Small@3x.png</td>
+<td style="text-align:center">87*87</td>
+</tr>
+<tr>
+<td>Icon-40@3x.png</td>
+<td style="text-align:center">120*120</td>
+</tr>
+<tr>
+<td>Icon-60@3x.png</td>
+<td style="text-align:center">180*180</td>
+</tr>
+<tr>
+<td>Icon.png</td>
+<td style="text-align:center">57*57</td>
+</tr>
+<tr>
+<td>Icon@2x.png</td>
+<td style="text-align:center">114*114</td>
+</tr>
+<tr>
+<td>Icon-Small.png</td>
+<td style="text-align:center">29*29</td>
+</tr>
+<tr>
+<td>Icon-Small@2x.png</td>
+<td style="text-align:center">58*58</td>
+</tr>
+<tr>
+<td>Icon-Small-50.png</td>
+<td style="text-align:center">50*50</td>
+</tr>
+<tr>
+<td>Icon-Small-50@2x.png</td>
+<td style="text-align:center">100*100</td>
+</tr>
+<tr>
+<td>Icon-72.png</td>
+<td style="text-align:center">72*72</td>
+</tr>
+<tr>
+<td>Icon-72@2x.png</td>
+<td style="text-align:center">144*144</td>
+</tr>
+<tr>
+<td>Icon-40.png</td>
+<td style="text-align:center">40*40</td>
+</tr>
+<tr>
+<td>Icon-40@2x.png</td>
+<td style="text-align:center">80*80</td>
+</tr>
+<tr>
+<td>Icon-60.png</td>
+<td style="text-align:center">60*60</td>
+</tr>
+<tr>
+<td>Icon-60@2x.png</td>
+<td style="text-align:center">120*120</td>
+</tr>
+<tr>
+<td>Icon-76.png</td>
+<td style="text-align:center">76*76</td>
+</tr>
+<tr>
+<td>Icon-76@2x.png</td>
+<td style="text-align:center">152*152</td>
+</tr>
+</tbody>
+</table>
+<p>推荐工具：<a href="https://itunes.apple.com/cn/app/id866571115?mt=12" target="_blank" rel="external">Asset Catalog Creator Free</a></p>
+<p>使用该工具只需一张1024*1024的Icon就可以自动生成以上各种尺寸的Icon,包括图片命名，非常方便，也可以生成各种尺寸启动图，不过该功能是收费的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/04/iOS-app各种图片尺寸（Icon-Launchimg-应用市场）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Objective-C 编码规范(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/04/Objective-C 编码规范(一)/">Objective-C 编码规范(一)</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/04/Objective-C 编码规范(一)/" class="archive-article-date">
+  	<time datetime="2017-02-04T07:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a><a name="TOC"></a>目录</h2><ul>
+<li><p><a href="#">1 留白和格式</a></p>
+<ul>
+<li><a href="#">1.1 空格 VS 制表符</a></li>
+<li><a href="#">1.2 花括号</a></li>
+<li><a href="#">1.3 列数</a></li>
+<li><a href="#">1.4 方法的声明和定义</a></li>
+<li><a href="#">1.5 方法调用</a></li>
+<li><a href="#">1.6 协议名</a></li>
+<li><a href="#">1.7 块（闭包）</a></li>
+<li><a href="#">1.8 枚举类型</a></li>
+<li><a href="#">1.9 Case语句</a></li>
+</ul>
+</li>
+<li><p><a href="#reference">参考</a></p>
+</li>
+</ul>
+<h2 id="1-留白和格式"><a href="#1-留白和格式" class="headerlink" title="1 留白和格式"></a><a name="space"></a>1 留白和格式</h2><h3 id="1-1-空格-VS-制表符"><a href="#1-1-空格-VS-制表符" class="headerlink" title="1.1 空格 VS 制表符"></a><a name="space-basic-principle"></a>1.1 空格 VS 制表符</h3><hr>
+<blockquote>
+<p>【建议】使用空格进行缩进。</p>
+</blockquote>
+<p> 不要在工程里使用Tab键，使用空格来进行缩进。<br>通过设置 Xcode &gt; Preferences &gt; Text Editing 将Tab和自动缩进都设置为4个空格。</p>
+<ul>
+<li>类方法声明在方法类型与返回类型之间要有空格。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> // 糟糕</div><div class="line">-(void)methodName:(NSString *)string; </div><div class="line">// OK</div><div class="line"> - (void)methodName:(NSString *)string;</div></pre></td></tr></table></figure>
+<ul>
+<li>条件判断的括号内侧不应有空格。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 糟糕</div><div class="line">if ( a &lt; b ) &#123; </div><div class="line">// something</div><div class="line">&#125; </div><div class="line">// OK</div><div class="line">if (a &lt; b) &#123;</div><div class="line"> // something</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>关系运算符（如  &gt;= 、 != ）和逻辑运算符（如  &amp;&amp; 、 || ）两边要有空格。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  // OK</div><div class="line">(someValue &gt; 100)? YES : NO </div><div class="line">// OK</div><div class="line">(items)?: @[]</div></pre></td></tr></table></figure>
+<p>  二元算数运算符两侧是否加空格不确定，根据情况自己定。一元运算符与操作数之前没有空格。<br>多个参数逗号后留一个空格（这也符合正常的西文语法）。</p>
+<h3 id="1-2-花括号"><a href="#1-2-花括号" class="headerlink" title="1.2 花括号"></a><a></a>1.2 花括号</h3><hr>
+<blockquote>
+<p>【建议】方法大括号和其他大括号(if/else/switch/while 等.)总是在同一行语句打开但在新行中关闭。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if (user.isHappy) &#123;</div><div class="line">    //Do something</div><div class="line">&#125; </div><div class="line">else &#123;</div><div class="line">    //Do something else</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="1-3-列数"><a href="#1-3-列数" class="headerlink" title="1.3 列数"></a><a name="space-column"></a>1.3 列数</h3><hr>
+<blockquote>
+<p>【建议】尽量让你的代码保持在 80 列之内。</p>
+</blockquote>
+<p>通过设置 Xcode &gt; Preferences &gt; Text Editing &gt; Show page guide，来使越界更容易被发现。</p>
+<h3 id="1-4-方法的声明和定义"><a href="#1-4-方法的声明和定义" class="headerlink" title="1.4 方法的声明和定义"></a><a name="naming-method"></a>1.4 方法的声明和定义</h3><hr>
+<blockquote>
+<p>【建议】 +/- 和返回类型之间须使用一个空格，参数列表中只有参数之间可以有空格。</p>
+</blockquote>
+<p>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">+ (NSDate *)dateFromString:(NSString *)string&#123;</div><div class="line">    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];</div><div class="line">    [formatter setDateFormat:@&quot;yyyy-MM-dd HH:mm:ss&quot;];</div><div class="line">    NSDate *date = [formatter dateFromString:string];</div><div class="line">    [formatter release];</div><div class="line">    return date;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  星号前的空格是可选的。当写新的代码时，要与先前代码保持一致。如果一行有非常多的参数，更好的方式是将每个参数单独拆成一行。如果使用多行，将每个参数前的冒号对齐。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (void)doSomethingWith:(GTMFoo *)theFoo	</div><div class="line">                     rect:(NSRect)theRect</div><div class="line">                 interval:(float)theInterval &#123;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>当第一个关键字比其它的短时，保证下一行至少有 4 个空格的缩进。这样可以使关键字垂直对齐，而不是使用冒号对齐：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (void)short:(GTMFoo *)theFoo</div><div class="line">    longKeyword:(NSRect)theRect</div><div class="line">    evenLongerKeyword:(float)theInterval &#123;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="1-5-方法调用"><a href="#1-5-方法调用" class="headerlink" title="1.5 方法调用"></a><a name="naming-protocol"></a>1.5 方法调用</h3><hr>
+<blockquote>
+<p>【建议】方法调用应尽量保持与方法声明的格式一致。当格式的风格有多种选择时，新的代码要与已有代码保持一致。</p>
+</blockquote>
+<p>调用时所有参数应该在同一行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[myObject doFooWith:arg1 name:arg2 error:arg3];</div></pre></td></tr></table></figure></p>
+<p>或者每行一个参数，以冒号对齐：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[myObject doFooWith:arg1</div><div class="line">               name:arg2</div><div class="line">              error:arg3];</div></pre></td></tr></table></figure></p>
+<p>方法定义与方法声明一样，当关键字的长度不足以以冒号对齐时，下一行都要以四个空格进行缩进。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[myObj short:arg1</div><div class="line">   longKeyword:arg2</div><div class="line">   evenLongerKeyword:arg3];</div></pre></td></tr></table></figure></p>
+<h3 id="1-6-协议名"><a href="#1-6-协议名" class="headerlink" title="1.6 协议名"></a><a name="protocol_name"></a>1.6 协议名</h3><hr>
+<blockquote>
+<p>【建议】类型标识符和尖括号内的协议名之间，不能有任何空格。</p>
+</blockquote>
+<p>这条规则适用于类声明、实例变量以及方法声明。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@interface MyProtocoledClass : NSObject&lt;NSWindowDelegate&gt; &#123;</div><div class="line"> @private</div><div class="line">  id&lt;MyFancyDelegate&gt; delegate_;</div><div class="line">&#125;</div><div class="line">- (void)setDelegate:(id&lt;MyFancyDelegate&gt;)aDelegate;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<p>@public 和 @private 访问修饰符应该以一个空格缩进。</p>
+<h3 id="1-7-块（闭包）"><a href="#1-7-块（闭包）" class="headerlink" title=" 1.7 块（闭包）"></a><a name="naming-constant"></a> 1.7 块（闭包）</h3><hr>
+<blockquote>
+<p>【建议】块（block）适合用在 target/selector 模式下创建回调方法时，因为它使代码更易读。块中的代码应该缩进 4 个空格。</p>
+</blockquote>
+<p>取决于块的长度，下列都是合理的风格准则：</p>
+<ul>
+<li><p>如果一行可以写完块，则没必要换行。</p>
+</li>
+<li><p>如果不得不换行，关括号应与块声明的第一个字符对齐。<br> 块内的代码须按 4 空格缩进。</p>
+</li>
+<li><p>如果块太长，比如超过 20 行，建议把它定义成一个局部变量，然后再使用该变量。</p>
+</li>
+<li><p>如果块不带参数，^{ 之间无须空格。如果带有参数，^( 之间无须空格，但 ) { 之间须有一个空格。</p>
+</li>
+<li><p>块内允许按两个空格缩进，但前提是和项目的其它代码保持一致的缩进风格。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">// The entire block fits on one line.</div><div class="line">[operation setCompletionBlock:^&#123; [self onOperationDone]; &#125;];</div><div class="line"></div><div class="line">[operation setCompletionBlock:^&#123;</div><div class="line">    [self.delegate newDataAvailable];</div><div class="line">&#125;];</div><div class="line"></div><div class="line"></div><div class="line">dispatch_async(fileIOQueue_, ^&#123;</div><div class="line">    NSString* path = [self sessionFilePath];</div><div class="line">    if (path) &#123;</div><div class="line">      // ...</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line">[[SessionService sharedService]</div><div class="line">    loadWindowWithCompletionBlock:^(SessionWindow *window) &#123;</div><div class="line">        if (window) &#123;</div><div class="line">          [self windowDidLoad:window];</div><div class="line">        &#125; else &#123;</div><div class="line">          [self errorLoadingWindow];</div><div class="line">        &#125;</div><div class="line">    &#125;];</div><div class="line"></div><div class="line">// An example where the parameter wraps and the block declaration does</div><div class="line">// not fit on the same line as the name.</div><div class="line">[[SessionService sharedService]</div><div class="line">    loadWindowWithCompletionBlock:</div><div class="line">        ^(SessionWindow *window) &#123;</div><div class="line">            if (window) &#123;</div><div class="line">              [self windowDidLoad:window];</div><div class="line">            &#125; else &#123;</div><div class="line">              [self errorLoadingWindow];</div><div class="line">            &#125;</div><div class="line">        &#125;];</div><div class="line"></div><div class="line">// Large blocks can be declared out-of-line.</div><div class="line">void (^largeBlock)(void) = ^&#123;</div><div class="line">    // ...</div><div class="line">&#125;;</div><div class="line">[operationQueue_ addOperationWithBlock:largeBlock];</div></pre></td></tr></table></figure>
+<h3 id="1-8-枚举类型"><a href="#1-8-枚举类型" class="headerlink" title="1.8 枚举类型"></a><a name="abbreviation"></a>1.8 枚举类型</h3><hr>
+<blockquote>
+<p>【建议】当使用enum时，推荐使用新的固定基本类型规格，因为它有更强的类型检查和代码补全。现在SDK有一个宏NS_ENUM()来帮助和鼓励你使用固定的基本类型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">typedef NS_ENUM(NSInteger, RWTLeftMenuTopItemType) &#123;</div><div class="line">  RWTLeftMenuTopItemMain,</div><div class="line">  RWTLeftMenuTopItemShows,</div><div class="line">  RWTLeftMenuTopItemSchedule</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="1-9-Case语句"><a href="#1-9-Case语句" class="headerlink" title="1.9 Case语句"></a><a name="naming-others"></a>1.9 Case语句</h3><hr>
+<blockquote>
+<p>【建议】大括号在case语句中并不是必须的，除非编译器强制要求。当一个case语句包含多行代码时，大括号应该加上。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">switch (condition) &#123;</div><div class="line">  case 1:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">  case 2: &#123;</div><div class="line">    // ...</div><div class="line">    // Multi-line example using braces</div><div class="line">    break;</div><div class="line">  &#125;</div><div class="line">  case 3:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">  default: </div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>有很多次，当相同代码被多个cases使用时，一个fall-through应该被使用。一个fall-through就是在case最后移除’break’语句，这样就能够允许执行流程跳转到下一个case值。为了代码更加清晰，一个fall-through需要注释一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">switch (condition) &#123;</div><div class="line">  case 1:</div><div class="line">    // ** fall-through! **</div><div class="line">  case 2:</div><div class="line">    // code executed for values 1 and 2</div><div class="line">    break;</div><div class="line">  default: </div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当在switch使用枚举类型时，’default’是不需要的。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">RWTLeftMenuTopItemType menuType = RWTLeftMenuTopItemMain;</div><div class="line">switch (menuType) &#123;</div><div class="line">  case RWTLeftMenuTopItemMain:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">  case RWTLeftMenuTopItemShows:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">  case RWTLeftMenuTopItemSchedule:</div><div class="line">    // ...</div><div class="line">    break;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/04/Objective-C 编码规范(一)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Objective-C编码规范（二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/04/Objective-C编码规范（二/">Objective-C 编码规范(二)</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/04/Objective-C编码规范（二/" class="archive-article-date">
+  	<time datetime="2017-02-04T06:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a name="TOC"></a>目录</p>
+<ul>
+<li><a href="#name">2 命名</a><ul>
+<li><a href="#fileName">2.1  文件名</a></li>
+<li><a href="#Objective-C++">2.2 Objective-C++</a></li>
+<li><a href="#className">2.3 类名</a></li>
+<li><a href="#ClassExternName">2.4 类别名</a></li>
+<li><a href="#Objective-CMethodName">2.5 Objective-C方法名</a></li>
+<li><a href="#varName">2.6 变量名</a></li>
+<li><a href="#NotificationName">2.7 通知名</a></li>
+<li><a href="#Prototol_Name">2.8 协议名</a></li>
+</ul>
+</li>
+</ul>
+<p>对于易维护的代码而言，命名规则非常重要。Objective-C 的方法名往往十分长，但代码块读起来就像散文一样，不需要太多的代码注释。<br>当编写纯粹的 Objective-C 代码时，我们基本遵守标准的 Objective-C naming rules，这些命名规则可能与 C++ 风格指南中的大相径庭。例如，Google 的 C++ 风格指南中推荐使用下划线分隔的单词作为变量名，而(苹果的)风格指南则使用驼峰命名法，这在 Objective-C 社区中非常普遍。<br>任何的类、类别、方法以及变量的名字中都使用全大写的 首字母缩写。这遵守了苹果的标准命名方式，如 URL、TIFF 以及 EXIF。<br>当编写 Objective-C++ 代码时，事情就不这么简单了。许多项目需要实现跨平台的 C++ API，并混合一些 Objective-C、Cocoa 代码，或者直接以 C++ 为后端，前端用本地 Cocoa 代码。这就导致了两种命名方式直接不统一。</p>
+<p> 我们的解决方案是：编码风格取决于方法/函数以哪种语言实现。如果在一个 @implementation 语句中，就使用 Objective-C 的风格。如果实现一个 C++ 的类，就使用 C++ 的风格。这样避免了一个函数里面实例变量和局部变量命名规则混乱，严重影响可读性。</p>
+<p><a name="name"></a>2  命名</p>
+<hr>
+<h3 id="2-1-文件名"><a href="#2-1-文件名" class="headerlink" title="2.1 文件名"></a><a name="fileName"></a>2.1 文件名</h3><blockquote>
+<p>【建议】文件名的命名应反映出其实现了什么类–包括大小写。遵循你所参与项目的约定。<br>  文件的扩展名应该如下：<br>|后缀|文件类型说明|<br>|:—————|:—————–|<br>| .h     | C/C++/Objective-C头文件 |<br>| .m     |Objective-C实现文件       |<br>| .mm    | Ojbective-C++ 的实现文件 |<br>|.cc     |纯C++实现文件             |<br>|.c      |纯C实现文件               |</p>
+</blockquote>
+<h3 id="2-2-Objective-C"><a href="#2-2-Objective-C" class="headerlink" title="2.2  Objective-C++"></a><a name=" Objective-C++"></a>2.2  Objective-C++</h3><blockquote>
+<p>【建议】源代码文件内，Ojbective-C++ 代码遵循你正在实现的函数/方法的风格。</p>
+</blockquote>
+<pre><code>为了最小化 Cocoa/Objective-C 与 C++ 之间命名风格的冲突，根据待实现的函数/方法选择编码风格。实现 @implementation 语句块时，使用 Objective-C 的命名规则；如果实现一个 C++ 的类，就使用 C++ 命名规则。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">// file: cross_platform_header.h </div><div class="line"> class CrossPlatformAPI &#123;  </div><div class="line">public:  </div><div class="line"> ...   </div><div class="line">int DoSomethingPlatformSpecific();  // impl on each platform  </div><div class="line">private:  </div><div class="line"> int an_instance_var_; </div><div class="line">&#125;;</div><div class="line">// file: mac_implementation.mm </div><div class="line">#include &quot;cross_platform_header.h&quot;  </div><div class="line">// A typical Objective-C class, using Objective-C naming. </div><div class="line"></div><div class="line">@interface MyDelegate : NSObject &#123; </div><div class="line"> @private   int instanceVar_;   </div><div class="line">CrossPlatformAPI* backEndObject_; </div><div class="line">&#125; </div><div class="line">(void)respondToSomething:(id)something; </div><div class="line">@end </div><div class="line">@implementation MyDelegate </div><div class="line">- (void)respondToSomething:(id)something &#123; </div><div class="line"></div><div class="line">  // bridge from Cocoa through our C++ backend  </div><div class="line">instanceVar_ = backEndObject-&gt;DoSomethingPlatformSpecific();</div><div class="line"> NSString* tempString = [NSString stringWithInt:instanceVar_]; </div><div class="line"> NSLog(@&quot;%@&quot;, tempString); </div><div class="line"></div><div class="line">&#125;</div><div class="line">@end </div><div class="line"></div><div class="line"> // The platform-specific implementation of the C++ class, using </div><div class="line">// C++ naming.</div><div class="line">int CrossPlatformAPI::DoSomethingPlatformSpecific() &#123;  </div><div class="line"> NSString* temp_string = [NSString stringWithInt:an_instance_var_];</div><div class="line"> NSLog(@&quot;%@&quot;, temp_string);   </div><div class="line">return [temp_string intValue]; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-3-类名"><a href="#2-3-类名" class="headerlink" title="2.3 类名"></a><a name="className"></a>2.3 类名</h3><blockquote>
+<p>【建议】类名（以及类别、协议名）应首字母大写，并以驼峰格式分割单词。</p>
+</blockquote>
+<pre><code>应用层 的代码，应该尽量避免不必要的前缀。为每个类都添加相同的前缀无助于可读性。当编写的代码期望在不同应用程序间复用时，应使用前缀（如：GTMSendMessage）。
+</code></pre><h3 id="2-4-类别名"><a href="#2-4-类别名" class="headerlink" title="2.4 类别名"></a><a name="ClassExternName"></a>2.4 类别名</h3><blockquote>
+<p>【建议】类别名应该包含它所扩展的类的名字。同时还应该表明该类别的功能。推荐如下方式：” UILabel+FlickerNumber.h”</p>
+</blockquote>
+<p>###<a name="Objective-CMethodName"></a>2.5 Objective-C方法名</p>
+<blockquote>
+<p>【建议】方法名应该以小写字母开头，并混合驼峰格式。每个具名参数也应该以小写字母开头。</p>
+</blockquote>
+<pre><code>方法名应尽量读起来就像句子，这表示你应该选择与方法名连在一起读起来通顺的参数名。（例如，convertPoint:fromRect: 或 replaceCharactersInRange:withString:）。
+访问器方法应该与他们 要获取的 成员变量的名字一样，但不应该以get作为前缀。
+</code></pre><ul>
+<li>以  get 、 set  开头的方法有特殊的意义，不要随意定义。<br>set 是属性默认的设置方法，如果函数不是为了设置类成员，则不要用  set  开头，可用  setup  替代。</li>
+<li>get 和属性方法无关，但在 Cocoa 中，其标准行为是通过引用传值，而不是直接返回结果的。欲获取变量，直接以变量名为名，如： userInfomation ，而不是  getUserInfomation 。<br>例如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (id)getDelegate;  // AVOID </div><div class="line">- (id)delegate;     // GOOD</div></pre></td></tr></table></figure>
+<pre><code>这仅限于 Objective-C 的方法名。C++ 的方法与函数的命名规则应该遵从 C++ 风格指南中的规则。
+</code></pre><h3 id="2-6-变量名"><a href="#2-6-变量名" class="headerlink" title="2.6 变量名"></a><a name="varName"></a>2.6 变量名</h3><blockquote>
+<p>【建议】变量名应该以小写字母开头，并使用驼峰格式。类的成员变量应该以下划线作为后缀。</p>
+</blockquote>
+<p>  例如：myLocalVariable、myInstanceVariable_。如果不能使用 Objective-C 2.0 的 @property，使用 KVO/KVC 绑定的成员变量可以以一个下划线作为前缀。</p>
+<h4 id="2-6-1-普通变量名"><a href="#2-6-1-普通变量名" class="headerlink" title="2.6.1 普通变量名"></a><a name=""></a>2.6.1 普通变量名</h4><pre><code>对于静态的属性（int 或指针），不要使用匈牙利命名法。尽量为变量起一个描述性的名字。不要担心浪费列宽，因为让新的代码阅读者立即理解你的代码更重要。例如：
+</code></pre><h4 id="2-6-2-实例变量"><a href="#2-6-2-实例变量" class="headerlink" title="2.6.2 实例变量"></a><a name=""></a>2.6.2 实例变量</h4><pre><code>实例变量应该混合大小写，并以下划线作为后缀，如 usernameTextField_。然而，如果不能使用 Objective-C 2.0（操作系统版本的限制），并且使用了 KVO/KVC 绑定成员变量时，我们允许例外。这种情况下，可以以一个下划线作为成员变量名字的前缀，这是苹果所接受的键/值命名惯例。如果可以使用 Objective-C 2.0，@property 以及 @synthesize 提供了遵从这一命名规则的解决方案。
+</code></pre><h4 id="2-6-3-常量"><a href="#2-6-3-常量" class="headerlink" title="2.6.3 常量"></a><a name=""></a>2.6.3 常量</h4><pre><code>常量名（如宏定义、枚举、静态局部变量等）应该以小写字母 k 开头，使用驼峰格式分隔单词，如：kInvalidHandle，kWritePerm。
+</code></pre><h3 id="2-7-通知命名"><a href="#2-7-通知命名" class="headerlink" title="2.7 通知命名"></a><a name="NotificationName"></a>2.7 通知命名</h3><blockquote>
+<p>【建议】基本命名格式是： [与通知相关的类名] + [Did | Will] + [UniquePartOfName] + Notification 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">NSApplicationDidBecomeActiveNotification</div><div class="line">NSWindowDidMiniaturizeNotification</div><div class="line">NSTextViewDidChangeSelectionNotification</div><div class="line">NSColorPanelColorDidChangeNotification</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="2-8协议名"><a href="#2-8协议名" class="headerlink" title="2.8协议名"></a><a name="Prototol_Name"></a>2.8协议名</h3><blockquote>
+<p>【建议】常用的 delegate、dateSource 做结尾外，还可以使用 …ing 这种形式，如：NSCoding、NSCopying、NSLocking</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/04/Objective-C编码规范（二/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Objective-C 编码规范（三，四)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/04/Objective-C 编码规范（三，四)/">Objective-C 编码规范（三，四）</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/04/Objective-C 编码规范（三，四)/" class="archive-article-date">
+  	<time datetime="2017-02-04T06:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a name="TOC"></a>目录</p>
+<ul>
+<li><a href="#name">3 注释</a><ul>
+<li><a href="#fileName">3.1 声明部分的注释</a></li>
+<li><a href="#Objective-C++">3.2 实现部分的注释</a></li>
+<li><a href="#className">3.3 对象所有权</a></li>
+<li><a href="#ClassExternName">3.4 方法声明注释</a></li>
+<li><a href="#Objective-CMethodName">3.5 属性的注释</a></li>
+</ul>
+</li>
+<li><a href="#Code"> 4  代码组织</a><ul>
+<li><a href="#if">4.1 条件语句</a></li>
+<li><a href="#doc">4.2 实现文件目录结构</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><a name="name"></a>3  注释</p>
+<h3 id="3-1-声明部分的注释"><a href="#3-1-声明部分的注释" class="headerlink" title="3.1 声明部分的注释"></a><a name="fileName"></a>3.1 声明部分的注释</h3><blockquote>
+<p>【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// A delegate for NSApplication to handle notifications about app </div><div class="line">// launch and shutdown. Owned by the main app controller.</div><div class="line"> @interface MyAppDelegate : NSObject &#123;  </div><div class="line"> ...</div><div class="line"> &#125;</div><div class="line"> @end</div></pre></td></tr></table></figure>
+<p>   如果你已经在文件头部详细描述了接口，可以直接说明 “完整的描述请参见文件头部”，但是一定要有这部分注释。<br>另外，公共接口的每个方法，都应该有注释来解释它的作用、参数、返回值以及其它影响。<br>    为类的线程安全性作注释，如果有的话。如果类的实例可以被多个线程访问，记得注释多线程条件下的使用规则。</p>
+<hr>
+<h3 id="3-2-实现部分的注释"><a href="#3-2-实现部分的注释" class="headerlink" title="3.2 实现部分的注释"></a><a name=" Objective-C++"></a>3.2 实现部分的注释</h3><blockquote>
+<p>【建议】使用 | 来引用注释中的变量名及符号名而不是使用引号。</p>
+</blockquote>
+<p>这会避免二义性，尤其是当符号是一个常用词汇，这使用语句读起来很糟糕。例如，对于符号 count ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">// Sometimes we need |count| to be less than zero.</div></pre></td></tr></table></figure></p>
+<p>或者当引用已经包含引号的符号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">// Remember to call |StringWithoutSpaces(&quot;foo bar baz&quot;)|</div></pre></td></tr></table></figure></p>
+<p>注：不过中文注释的话可以忽略该条</p>
+<h3 id="3-3-对象所有权"><a href="#3-3-对象所有权" class="headerlink" title="3.3 对象所有权"></a><a name="className"></a>3.3 对象所有权</h3><blockquote>
+<p>【建议】当与 Objective-C 最常规的作法不同时，尽量使指针的所有权模型尽量明确。</p>
+</blockquote>
+<pre><code> 继承自 NSObject 的对象的实例变量指针，通常被假定是强引用关系（retained），某些情况下也可以注释为弱引用（weak）或使用 __weak 生命周期限定符。同样，声明的属性如果没有被类 retained，必须指定是弱引用或赋予 @property 属性。然而，Mac 软件中标记上 IBOutlets 的实例变量，被认为是不会被类 retained 的。
+当实例变量指向 CoreFoundation、C++ 或者其它非 Objective-C 对象时，不论指针是否会被 retained，都需要使用 __strong 和 __weak 类型修饰符明确指明。CoreFoundation 和其它非 Objective-C 对象指针需要显式的内存管理，即便使用了自动引用计数或垃圾回收机制。当不允许使用 __weak 类型修饰符（比如，使用 clang 编译时的 C++ 成员变量），应使用注释替代说明。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@interface MyDelegate : NSObject &#123; </div><div class="line"> @private   IBOutlet NSButton *okButton_;  // normal NSControl; implicitly weak on Mac only   </div><div class="line"></div><div class="line"> AnObjcObject* doohickey_;  // my doohickey  </div><div class="line">__weak MyObjcParent *parent_;  // so we can send msgs back (owns me)    // non-NSObject pointers...  </div><div class="line"></div><div class="line">__strong CWackyCPPClass *wacky_;  // some cross-platform object   </div><div class="line"></div><div class="line">__strong CFDictionaryRef *dict_;</div><div class="line"> &#125;</div><div class="line"> @property(strong, nonatomic) NSString *doohickey;</div><div class="line"> @property(weak, nonatomic) NSString *parent;</div><div class="line"> @end</div></pre></td></tr></table></figure>
+<h3 id="3-4-方法声明注释"><a href="#3-4-方法声明注释" class="headerlink" title="3.4 方法声明注释"></a><a name="ClassExternName"></a>3.4 方法声明注释</h3><blockquote>
+<p>【建议】声明的方法，要注释方法功能，参数意义，返回值，格式如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//含参数，有返回值的方法注释</div><div class="line">/**</div><div class="line"> *  初始化方法-2</div><div class="line"> *  @param frame frame</div><div class="line"> *  @param array 标题数组</div><div class="line"> *  @param index 默认选中标题索引</div><div class="line"> *  @return WJSegmentView</div><div class="line"> */</div><div class="line">- (instancetype)initWithFrame:(CGRect)frame</div><div class="line">                   titleArray:(NSArray *)array</div><div class="line">                     sellectIndex:(long)index;</div><div class="line">      </div><div class="line">//无参，无返回值方法注释</div><div class="line">/**移除键盘*/</div><div class="line">+ (void)removeKeyBoard&#123;</div><div class="line">    NSArray *windows = [[UIApplication sharedApplication] windows];</div><div class="line">    for(UIWindow *window in windows)&#123;</div><div class="line">        [CommonMethods textViewTextFieldResignFirstResponder:window];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-5-属性的注释"><a href="#3-5-属性的注释" class="headerlink" title="3.5 属性的注释"></a><a name="varName"></a>3.5 属性的注释</h3><blockquote>
+<p>【建议】在声明文件中声明的实例变量在上一行加注释。或者直接在实例变量后边注释，与项目已有风格保持一致。<br>格式如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@property (nonatomic,copy)NSString *loginID;//登录ID</div><div class="line">@property (nonatomic,copy)NSString *userName;//用户名</div><div class="line">@property (nonatomic,copy)NSString *realName;//真是姓名</div><div class="line">   @property (nonatomic,copy)NSString *shareUrl;//二维码分享链接</div><div class="line">   @property (nonatomic,copy)NSString *appShareUrl;//社交分享链接</div><div class="line">   @property (nonatomic,copy)NSString *headPortraitAddr;//用户头像</div><div class="line"></div><div class="line">/**标题数组*/</div><div class="line">@property (nonatomic,retain)NSArray *titleArray;</div><div class="line">/**选中按钮底部背景*/</div><div class="line">@property (nonatomic,retain)UIView  *backgroundView;</div><div class="line">/**默认选中索引*/</div><div class="line">  @property (nonatomic,assign)long     selectIndex;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="4-代码组织"><a href="#4-代码组织" class="headerlink" title="4 代码组织"></a><a name="Code"></a>4 代码组织</h2><h3 id="4-1-条件语句"><a href="#4-1-条件语句" class="headerlink" title="4.1 条件语句"></a><a name="if"></a>4.1 条件语句</h3><p>当使用条件语句编码时，左手边的代码应该是”golden” 或 “happy”路径。也就是不要嵌套if语句，多个返回语句也是OK。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- (void)someMethod &#123;  </div><div class="line"> if (![someOther boolValue]) &#123;   </div><div class="line">  return;  </div><div class="line"> &#125;   </div><div class="line"> //Do something important</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>【建议】出现超过两层循环的代码，用函数或block替代<br>// 为了简化示例，没有错误处理，并使用了伪代码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// 糟糕的例子</div><div class="line">- (Task *)creatTaskWithPath:(NSString *)path &#123;</div><div class="line">    Task *aTask;</div><div class="line">    if ([path isURL]) &#123;</div><div class="line">        if ([fileManager isWritableFileAtPath:path]) &#123;</div><div class="line">            if (![taskManager hasTaskWithPath:path]) &#123;</div><div class="line">                aTask = [[Task alloc] initWithPath:path];</div><div class="line">            &#125;</div><div class="line">            else &#123;</div><div class="line">                return nil;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        else &#123;</div><div class="line">            return nil;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    else &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line">    return aTask;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 改写的例子</div><div class="line">- (Task *)creatTaskWithPath:(NSString *)path &#123;</div><div class="line">    if (![path isURL]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (![fileManager isWritableFileAtPath:path]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if ([taskManager hasTaskWithPath:path]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Task *aTask = [[Task alloc] initWithPath:path];</div><div class="line">    return aTask;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="4-2-实现文件目录结构"><a href="#4-2-实现文件目录结构" class="headerlink" title="4.2 实现文件目录结构"></a><a name="doc"></a>4.2 实现文件目录结构</h3><blockquote>
+<p>【建议】 在函数分组和protocol/delegate实现中使用#pragma mark -来分类方法，要遵循以下一般结构：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">#pragma mark - Lifecycle</div><div class="line"></div><div class="line">- (instancetype)init &#123;&#125;</div><div class="line">- (void)dealloc &#123;&#125;</div><div class="line">- (void)viewDidLoad &#123;&#125;</div><div class="line">- (void)viewWillAppear:(BOOL)animated &#123;&#125;</div><div class="line">- (void)didReceiveMemoryWarning &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Custom Accessors</div><div class="line"></div><div class="line">- (void)setCustomProperty:(id)value &#123;&#125;</div><div class="line">- (id)customProperty &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - IBActions</div><div class="line"></div><div class="line">- (IBAction)submitData:(id)sender &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Public</div><div class="line"></div><div class="line">- (void)publicMethod &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Private</div><div class="line"></div><div class="line">- (void)privateMethod &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Protocol conformance</div><div class="line">#pragma mark - UITextFieldDelegate</div><div class="line">#pragma mark - UITableViewDataSource</div><div class="line">#pragma mark - UITableViewDelegate</div><div class="line"></div><div class="line">#pragma mark - NSCopying</div><div class="line"></div><div class="line">- (id)copyWithZone:(NSZone *)zone &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - NSObject</div><div class="line"></div><div class="line">- (NSString *)description &#123;&#125;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/04/Objective-C 编码规范（三，四)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-测试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -211,6 +784,90 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/01/23/测试/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-部署Hexo博客填坑记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/23/部署Hexo博客填坑记/">部署Hexo博客填坑记</a>
+    </h1>
+  
+
+        
+        <a href="/2017/01/23/部署Hexo博客填坑记/" class="archive-article-date">
+  	<time datetime="2017-01-23T07:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="部署Hexo博客新家小记"><a href="#部署Hexo博客新家小记" class="headerlink" title="部署Hexo博客新家小记"></a>部署Hexo博客新家小记</h1><p>最近项目不忙，于是花了点时间部署了<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>,虽然不难，但是还是遇到点小问题，特此写下这篇博客，希望能帮到有需要的同学。</p>
+<p>hexo 安装步骤：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init blog</div><div class="line">cd blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
+<p>遗憾的是第一步就卡住了，安装过程贼慢，我是等了一个小时，还没有安装完成，简直忍无可忍，查阅相关资料，原来是被墙的问题。</p>
+<blockquote>
+<p>解决方案：选择国内镜像去获取资源</p>
+</blockquote>
+<ul>
+<li>在安装时可以手动指定从哪个镜像服务器获取资源，我们可以使用阿里巴巴在国内的镜像服务器，命令如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g --registry=http://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<ul>
+<li>只需要使用–registry参数指定镜像服务器地址，为了避免每次安装都需要–registry参数，可以使用如下命令进行永久设置：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set registry http://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p>换了国内镜像，安装速度就很快了,原来一个小时没装成功的，现在不到一分钟就解决了，就是这么任性。</p>
+<ul>
+<li>获取资源没问题了，可能还会遇到另一个问题：<strong>权限问题</strong></li>
+</ul>
+<p><img src="http://ok7mrfi5x.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-01-23.png" alt="image"></p>
+<p>很明显可以看到 “<strong>permission denied</strong>“</p>
+<blockquote>
+<p>解决方案：sudo  npm install hexo-cli -g</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/23/部署Hexo博客填坑记/">展开全文 >></a>
         </p>
       
 
@@ -545,6 +1202,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">iOS,自动化打包,fir.cli</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>
