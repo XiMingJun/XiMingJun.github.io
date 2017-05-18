@@ -6,18 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Objective-C 编码规范（三，四） | 蜗牛yu梦想</title>
+  <title>Archives: 2017/5 | 蜗牛yu梦想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目录  3 注释 3.1 声明部分的注释 3.2 实现部分的注释 3.3 对象所有权 3.4 方法声明注释 3.5 属性的注释    4  代码组织 4.1 条件语句 4.2 实现文件目录结构     3  注释 3.1 声明部分的注释 【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。  123456// A delegate for NSApplication to">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Objective-C 编码规范（三，四）">
-<meta property="og:url" content="http://yoursite.com/2017/02/04/Objective-C 编码规范（三，四)/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="蜗牛yu梦想">
+<meta property="og:url" content="http://yoursite.com/archives/2017/05/index.html">
 <meta property="og:site_name" content="蜗牛yu梦想">
-<meta property="og:description" content="目录  3 注释 3.1 声明部分的注释 3.2 实现部分的注释 3.3 对象所有权 3.4 方法声明注释 3.5 属性的注释    4  代码组织 4.1 条件语句 4.2 实现文件目录结构     3  注释 3.1 声明部分的注释 【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。  123456// A delegate for NSApplication to">
-<meta property="og:updated_time" content="2017-03-15T04:39:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Objective-C 编码规范（三，四）">
-<meta name="twitter:description" content="目录  3 注释 3.1 声明部分的注释 3.2 实现部分的注释 3.3 对象所有权 3.4 方法声明注释 3.5 属性的注释    4  代码组织 4.1 条件语句 4.2 实现文件目录结构     3  注释 3.1 声明部分的注释 【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。  123456// A delegate for NSApplication to">
+<meta name="twitter:title" content="蜗牛yu梦想">
   
     <link rel="alternative" href="/atom.xml" title="蜗牛yu梦想" type="application/atom+xml">
   
@@ -153,206 +149,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Objective-C 编码规范（三，四)" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Objective-C 编码规范（三，四）
-    </h1>
-  
-
-        
-        <a href="/2017/02/04/Objective-C 编码规范（三，四)/" class="archive-article-date">
-  	<time datetime="2017-02-04T06:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/05/18/开发常用工具/" class="archive-article-date">
+  	<time datetime="2017-05-18T06:49:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-18</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a name="TOC"></a>目录</p>
-<ul>
-<li><a href="#name">3 注释</a><ul>
-<li><a href="#fileName">3.1 声明部分的注释</a></li>
-<li><a href="#Objective-C++">3.2 实现部分的注释</a></li>
-<li><a href="#className">3.3 对象所有权</a></li>
-<li><a href="#ClassExternName">3.4 方法声明注释</a></li>
-<li><a href="#Objective-CMethodName">3.5 属性的注释</a></li>
-</ul>
-</li>
-<li><a href="#Code"> 4  代码组织</a><ul>
-<li><a href="#if">4.1 条件语句</a></li>
-<li><a href="#doc">4.2 实现文件目录结构</a></li>
-</ul>
-</li>
-</ul>
-<hr>
-<p><a name="name"></a>3  注释</p>
-<h3 id="3-1-声明部分的注释"><a href="#3-1-声明部分的注释" class="headerlink" title="3.1 声明部分的注释"></a><a name="fileName"></a>3.1 声明部分的注释</h3><blockquote>
-<p>【建议】每个接口、类别以及协议应辅以注释，以描述它的目的及与整个项目的关系。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// A delegate for NSApplication to handle notifications about app </div><div class="line">// launch and shutdown. Owned by the main app controller.</div><div class="line"> @interface MyAppDelegate : NSObject &#123;  </div><div class="line"> ...</div><div class="line"> &#125;</div><div class="line"> @end</div></pre></td></tr></table></figure>
-<p>   如果你已经在文件头部详细描述了接口，可以直接说明 “完整的描述请参见文件头部”，但是一定要有这部分注释。<br>另外，公共接口的每个方法，都应该有注释来解释它的作用、参数、返回值以及其它影响。<br>    为类的线程安全性作注释，如果有的话。如果类的实例可以被多个线程访问，记得注释多线程条件下的使用规则。</p>
-<hr>
-<h3 id="3-2-实现部分的注释"><a href="#3-2-实现部分的注释" class="headerlink" title="3.2 实现部分的注释"></a><a name=" Objective-C++"></a>3.2 实现部分的注释</h3><blockquote>
-<p>【建议】使用 | 来引用注释中的变量名及符号名而不是使用引号。</p>
-</blockquote>
-<p>这会避免二义性，尤其是当符号是一个常用词汇，这使用语句读起来很糟糕。例如，对于符号 count ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">// Sometimes we need |count| to be less than zero.</div></pre></td></tr></table></figure></p>
-<p>或者当引用已经包含引号的符号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">// Remember to call |StringWithoutSpaces(&quot;foo bar baz&quot;)|</div></pre></td></tr></table></figure></p>
-<p>注：不过中文注释的话可以忽略该条</p>
-<h3 id="3-3-对象所有权"><a href="#3-3-对象所有权" class="headerlink" title="3.3 对象所有权"></a><a name="className"></a>3.3 对象所有权</h3><blockquote>
-<p>【建议】当与 Objective-C 最常规的作法不同时，尽量使指针的所有权模型尽量明确。</p>
-</blockquote>
-<pre><code> 继承自 NSObject 的对象的实例变量指针，通常被假定是强引用关系（retained），某些情况下也可以注释为弱引用（weak）或使用 __weak 生命周期限定符。同样，声明的属性如果没有被类 retained，必须指定是弱引用或赋予 @property 属性。然而，Mac 软件中标记上 IBOutlets 的实例变量，被认为是不会被类 retained 的。
-当实例变量指向 CoreFoundation、C++ 或者其它非 Objective-C 对象时，不论指针是否会被 retained，都需要使用 __strong 和 __weak 类型修饰符明确指明。CoreFoundation 和其它非 Objective-C 对象指针需要显式的内存管理，即便使用了自动引用计数或垃圾回收机制。当不允许使用 __weak 类型修饰符（比如，使用 clang 编译时的 C++ 成员变量），应使用注释替代说明。
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@interface MyDelegate : NSObject &#123; </div><div class="line"> @private   IBOutlet NSButton *okButton_;  // normal NSControl; implicitly weak on Mac only   </div><div class="line"></div><div class="line"> AnObjcObject* doohickey_;  // my doohickey  </div><div class="line">__weak MyObjcParent *parent_;  // so we can send msgs back (owns me)    // non-NSObject pointers...  </div><div class="line"></div><div class="line">__strong CWackyCPPClass *wacky_;  // some cross-platform object   </div><div class="line"></div><div class="line">__strong CFDictionaryRef *dict_;</div><div class="line"> &#125;</div><div class="line"> @property(strong, nonatomic) NSString *doohickey;</div><div class="line"> @property(weak, nonatomic) NSString *parent;</div><div class="line"> @end</div></pre></td></tr></table></figure>
-<h3 id="3-4-方法声明注释"><a href="#3-4-方法声明注释" class="headerlink" title="3.4 方法声明注释"></a><a name="ClassExternName"></a>3.4 方法声明注释</h3><blockquote>
-<p>【建议】声明的方法，要注释方法功能，参数意义，返回值，格式如下：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//含参数，有返回值的方法注释</div><div class="line">/**</div><div class="line"> *  初始化方法-2</div><div class="line"> *  @param frame frame</div><div class="line"> *  @param array 标题数组</div><div class="line"> *  @param index 默认选中标题索引</div><div class="line"> *  @return WJSegmentView</div><div class="line"> */</div><div class="line">- (instancetype)initWithFrame:(CGRect)frame</div><div class="line">                   titleArray:(NSArray *)array</div><div class="line">                     sellectIndex:(long)index;</div><div class="line">      </div><div class="line">//无参，无返回值方法注释</div><div class="line">/**移除键盘*/</div><div class="line">+ (void)removeKeyBoard&#123;</div><div class="line">    NSArray *windows = [[UIApplication sharedApplication] windows];</div><div class="line">    for(UIWindow *window in windows)&#123;</div><div class="line">        [CommonMethods textViewTextFieldResignFirstResponder:window];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="3-5-属性的注释"><a href="#3-5-属性的注释" class="headerlink" title="3.5 属性的注释"></a><a name="varName"></a>3.5 属性的注释</h3><blockquote>
-<p>【建议】在声明文件中声明的实例变量在上一行加注释。或者直接在实例变量后边注释，与项目已有风格保持一致。<br>格式如下：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@property (nonatomic,copy)NSString *loginID;//登录ID</div><div class="line">@property (nonatomic,copy)NSString *userName;//用户名</div><div class="line">@property (nonatomic,copy)NSString *realName;//真是姓名</div><div class="line">   @property (nonatomic,copy)NSString *shareUrl;//二维码分享链接</div><div class="line">   @property (nonatomic,copy)NSString *appShareUrl;//社交分享链接</div><div class="line">   @property (nonatomic,copy)NSString *headPortraitAddr;//用户头像</div><div class="line"></div><div class="line">/**标题数组*/</div><div class="line">@property (nonatomic,retain)NSArray *titleArray;</div><div class="line">/**选中按钮底部背景*/</div><div class="line">@property (nonatomic,retain)UIView  *backgroundView;</div><div class="line">/**默认选中索引*/</div><div class="line">  @property (nonatomic,assign)long     selectIndex;</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="4-代码组织"><a href="#4-代码组织" class="headerlink" title="4 代码组织"></a><a name="Code"></a>4 代码组织</h2><h3 id="4-1-条件语句"><a href="#4-1-条件语句" class="headerlink" title="4.1 条件语句"></a><a name="if"></a>4.1 条件语句</h3><p>当使用条件语句编码时，左手边的代码应该是”golden” 或 “happy”路径。也就是不要嵌套if语句，多个返回语句也是OK。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- (void)someMethod &#123;  </div><div class="line"> if (![someOther boolValue]) &#123;   </div><div class="line">  return;  </div><div class="line"> &#125;   </div><div class="line"> //Do something important</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>【建议】出现超过两层循环的代码，用函数或block替代<br>// 为了简化示例，没有错误处理，并使用了伪代码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// 糟糕的例子</div><div class="line">- (Task *)creatTaskWithPath:(NSString *)path &#123;</div><div class="line">    Task *aTask;</div><div class="line">    if ([path isURL]) &#123;</div><div class="line">        if ([fileManager isWritableFileAtPath:path]) &#123;</div><div class="line">            if (![taskManager hasTaskWithPath:path]) &#123;</div><div class="line">                aTask = [[Task alloc] initWithPath:path];</div><div class="line">            &#125;</div><div class="line">            else &#123;</div><div class="line">                return nil;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        else &#123;</div><div class="line">            return nil;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    else &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line">    return aTask;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 改写的例子</div><div class="line">- (Task *)creatTaskWithPath:(NSString *)path &#123;</div><div class="line">    if (![path isURL]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (![fileManager isWritableFileAtPath:path]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if ([taskManager hasTaskWithPath:path]) &#123;</div><div class="line">        return nil;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Task *aTask = [[Task alloc] initWithPath:path];</div><div class="line">    return aTask;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="4-2-实现文件目录结构"><a href="#4-2-实现文件目录结构" class="headerlink" title="4.2 实现文件目录结构"></a><a name="doc"></a>4.2 实现文件目录结构</h3><blockquote>
-<p>【建议】 在函数分组和protocol/delegate实现中使用#pragma mark -来分类方法，要遵循以下一般结构：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">#pragma mark - Lifecycle</div><div class="line"></div><div class="line">- (instancetype)init &#123;&#125;</div><div class="line">- (void)dealloc &#123;&#125;</div><div class="line">- (void)viewDidLoad &#123;&#125;</div><div class="line">- (void)viewWillAppear:(BOOL)animated &#123;&#125;</div><div class="line">- (void)didReceiveMemoryWarning &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Custom Accessors</div><div class="line"></div><div class="line">- (void)setCustomProperty:(id)value &#123;&#125;</div><div class="line">- (id)customProperty &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - IBActions</div><div class="line"></div><div class="line">- (IBAction)submitData:(id)sender &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Public</div><div class="line"></div><div class="line">- (void)publicMethod &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Private</div><div class="line"></div><div class="line">- (void)privateMethod &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - Protocol conformance</div><div class="line">#pragma mark - UITextFieldDelegate</div><div class="line">#pragma mark - UITableViewDataSource</div><div class="line">#pragma mark - UITableViewDelegate</div><div class="line"></div><div class="line">#pragma mark - NSCopying</div><div class="line"></div><div class="line">- (id)copyWithZone:(NSZone *)zone &#123;&#125;</div><div class="line"></div><div class="line">#pragma mark - NSObject</div><div class="line"></div><div class="line">- (NSString *)description &#123;&#125;</div></pre></td></tr></table></figure>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://ok7mrfi5x.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-01-23%20%E4%B8%8A%E5%8D%8810.20.57.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/04/Objective-C 编码规范（三，四)/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/02/04/Objective-C编码规范（二/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Objective-C 编码规范(二)
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/01/23/测试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">部署Hexo博客新家小记</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-
-  
-    <div class="duoshuo"></div>
+    </div></section>
   
 
-
+    
 
 
           </div>
@@ -375,8 +208,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
